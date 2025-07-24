@@ -1,17 +1,27 @@
-    <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Poster</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>My Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>My Interactive Poster</h1>
-    <p>Click below to learn more!</p>
-    <button onclick="alert('Thanks for clicking!')">Learn More</button>
-  </div>
-  <script src="script.js"></script>
+  <h1>Interactive Dashboard</h1>
+  <canvas id="myChart" width="400" height="200"></canvas>
+
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3],
+          backgroundColor: ['red', 'blue', 'yellow']
+        }]
+      }
+    });
+  </script>
 </body>
 </html>
