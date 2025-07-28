@@ -199,7 +199,7 @@ function simulateQRScan() {
         
         // Reset QR code after 3 seconds
         setTimeout(() => {
-            qrCode.style.background = 'var(--primary-green)';
+            qrCode.style.background = 'var(--primary-color)';
             qrCode.innerHTML = '<i class="fas fa-qrcode"></i>';
             qrCode.style.animation = 'pulse 2s infinite';
             scanResult.innerHTML = '';

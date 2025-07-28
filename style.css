@@ -6,17 +6,17 @@
 }
 
 :root {
-    /* Botanical Color Palette */
-    --primary-green: #2d5a27;
-    --secondary-green: #4a7c59;
-    --accent-green: #7fb069;
-    --light-green: #a7c957;
-    --sage-green: #8fbc8f;
+    /* Victorian Greenhouse Palette */
+    --primary-color: #8B4513;
+    --secondary-color: #CD853F;
+    --accent-color: #DAA520;
+    --light-accent: #F4A460;
+    --warm-bronze: #CD7F32;
     
     /* Glass and Background Colors */
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
-    --dark-overlay: rgba(45, 90, 39, 0.8);
+    --dark-overlay: rgba(139, 69, 19, 0.8);
     --light-overlay: rgba(255, 255, 255, 0.9);
     
     /* Typography */
@@ -44,8 +44,8 @@
 body {
     font-family: var(--font-primary);
     line-height: 1.6;
-    color: var(--primary-green);
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: var(--primary-color);
+    background: linear-gradient(135deg, #faf6f0 0%, #e8dcc6 100%);
     overflow-x: hidden;
 }
 
@@ -87,12 +87,12 @@ html {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 1.25rem;
-    color: var(--primary-green);
+    color: var(--primary-color);
 }
 
 .nav-logo i {
     font-size: 1.5rem;
-    color: var(--accent-green);
+    color: var(--accent-color);
 }
 
 .nav-menu {
@@ -103,14 +103,14 @@ html {
 
 .nav-link {
     text-decoration: none;
-    color: var(--primary-green);
+    color: var(--primary-color);
     font-weight: 500;
     transition: var(--transition-fast);
     position: relative;
 }
 
 .nav-link:hover {
-    color: var(--accent-green);
+    color: var(--accent-color);
 }
 
 .nav-link::after {
@@ -120,7 +120,7 @@ html {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent-green);
+    background: var(--accent-color);
     transition: var(--transition-fast);
 }
 
@@ -137,7 +137,7 @@ html {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--primary-green);
+    background: var(--primary-color);
     margin: 3px 0;
     transition: var(--transition-fast);
 }
@@ -173,7 +173,12 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--dark-overlay);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
     z-index: -1;
 }
 
@@ -191,20 +196,41 @@ html {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
+    text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.8),
+        2px 2px 4px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.2)
+    );
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: inline-block;
 }
 
 .highlight {
-    color: var(--light-green);
+    color: var(--light-accent);
     display: block;
+    text-shadow: 
+        0 0 15px rgba(244, 164, 96, 0.8),
+        2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 
+        0 0 8px rgba(0, 0, 0, 0.8),
+        1px 1px 3px rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
 }
 
 .hero-buttons {
@@ -230,12 +256,12 @@ html {
 }
 
 .btn-primary {
-    background: var(--accent-green);
+    background: var(--accent-color);
     color: white;
 }
 
 .btn-primary:hover {
-    background: var(--secondary-green);
+    background: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -248,7 +274,7 @@ html {
 
 .btn-secondary:hover {
     background: white;
-    color: var(--primary-green);
+    color: var(--primary-color);
     transform: translateY(-2px);
 }
 
@@ -266,7 +292,7 @@ html {
 .stat-number {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--light-green);
+    color: var(--light-accent);
 }
 
 .stat-label {
@@ -301,12 +327,12 @@ html {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--primary-green);
+    color: var(--primary-color);
 }
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: var(--secondary-green);
+    color: var(--secondary-color);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -325,7 +351,7 @@ html {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--accent-green);
+    background: var(--accent-color);
     transform: translateX(-50%);
 }
 
@@ -348,7 +374,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--accent-green);
+    background: var(--accent-color);
     color: white;
     border-radius: var(--border-radius);
     padding: 0.5rem;
@@ -369,7 +395,7 @@ html {
 }
 
 .timeline-content h3 {
-    color: var(--primary-green);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-family: var(--font-heading);
 }
@@ -386,7 +412,7 @@ html {
 }
 
 .tag {
-    background: var(--light-green);
+    background: var(--light-accent);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
@@ -396,7 +422,7 @@ html {
 
 /* Reflection Section */
 .reflection-section {
-    background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-green) 100%);
+    background: linear-gradient(135deg, var(--warm-bronze) 0%, var(--light-accent) 100%);
     color: white;
 }
 
@@ -435,7 +461,7 @@ html {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1rem;
-    color: var(--accent-green);
+    color: var(--accent-color);
     font-size: 1.5rem;
 }
 
@@ -460,9 +486,9 @@ html {
 
 .tab-btn {
     padding: 1rem 2rem;
-    border: 2px solid var(--accent-green);
+    border: 2px solid var(--accent-color);
     background: transparent;
-    color: var(--accent-green);
+    color: var(--accent-color);
     border-radius: var(--border-radius);
     cursor: pointer;
     font-weight: 600;
@@ -471,7 +497,7 @@ html {
 
 .tab-btn.active,
 .tab-btn:hover {
-    background: var(--accent-green);
+    background: var(--accent-color);
     color: white;
 }
 
@@ -534,7 +560,7 @@ html {
 .qr-code {
     width: 120px;
     height: 120px;
-    background: var(--primary-green);
+    background: var(--primary-color);
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
@@ -546,7 +572,7 @@ html {
 }
 
 .demo-btn {
-    background: var(--accent-green);
+    background: var(--accent-color);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -558,7 +584,7 @@ html {
 }
 
 .demo-btn:hover {
-    background: var(--secondary-green);
+    background: var(--secondary-color);
 }
 
 .scan-result {
@@ -619,12 +645,12 @@ html {
 }
 
 .kiosk-btn.check-in {
-    background: var(--accent-green);
+    background: var(--accent-color);
     color: white;
 }
 
 .kiosk-btn.check-out {
-    background: var(--secondary-green);
+    background: var(--secondary-color);
     color: white;
 }
 
@@ -654,7 +680,7 @@ html {
 
 /* Demo Features */
 .demo-features h3 {
-    color: var(--primary-green);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-family: var(--font-heading);
 }
@@ -668,11 +694,11 @@ html {
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
-    color: var(--secondary-green);
+    color: var(--secondary-color);
 }
 
 .demo-features i {
-    color: var(--accent-green);
+    color: var(--accent-color);
 }
 
 /* Dashboard Mockup */
@@ -698,7 +724,7 @@ html {
 }
 
 .dashboard-card h4 {
-    color: var(--primary-green);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -715,7 +741,7 @@ html {
 .metric .number {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--primary-color);
 }
 
 .trend {
@@ -742,7 +768,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--secondary-green);
+    color: var(--secondary-color);
     position: relative;
 }
 
@@ -771,7 +797,7 @@ html {
 .data-flow h3,
 .value-proposition h3 {
     text-align: center;
-    color: var(--primary-green);
+    color: var(--primary-color);
     margin-bottom: 2rem;
     font-family: var(--font-heading);
 }
@@ -792,7 +818,7 @@ html {
 
 .layer-title {
     font-weight: 600;
-    color: var(--primary-green);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -805,7 +831,7 @@ html {
 }
 
 .component {
-    background: var(--light-green);
+    background: var(--light-accent);
     color: white;
     padding: 0.75rem 1rem;
     border-radius: var(--border-radius);
@@ -835,7 +861,7 @@ html {
 .step-number {
     width: 40px;
     height: 40px;
-    background: var(--accent-green);
+    background: var(--accent-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -846,7 +872,7 @@ html {
 }
 
 .flow-step h4 {
-    color: var(--primary-green);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-family: var(--font-heading);
 }
@@ -874,19 +900,19 @@ html {
 
 .value-item i {
     font-size: 2rem;
-    color: var(--accent-green);
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
 .value-item h4 {
-    color: var(--primary-green);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-family: var(--font-heading);
 }
 
 /* About Section */
 .about-section {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
 }
 
@@ -929,7 +955,7 @@ html {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    color: var(--accent-green);
+    color: var(--accent-color);
     font-size: 2rem;
 }
 
@@ -939,7 +965,7 @@ html {
 }
 
 .role {
-    color: var(--light-green);
+    color: var(--light-accent);
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -958,8 +984,8 @@ html {
 }
 
 .skill {
-    background: var(--light-green);
-    color: var(--primary-green);
+    background: var(--light-accent);
+    color: var(--primary-color);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.8rem;
@@ -968,7 +994,7 @@ html {
 
 /* Footer */
 .footer {
-    background: var(--primary-green);
+    background: var(--primary-color);
     color: white;
     padding: 3rem 0 1rem;
 }
@@ -983,13 +1009,13 @@ html {
 .footer-section h3 {
     margin-bottom: 1rem;
     font-family: var(--font-heading);
-    color: var(--light-green);
+    color: var(--light-accent);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid var(--secondary-green);
+    border-top: 1px solid var(--secondary-color);
     opacity: 0.8;
 }
 
