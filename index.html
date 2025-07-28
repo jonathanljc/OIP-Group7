@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-seedling"></i>
+                <img src="assets/friendsofglasgow.png" alt="Friends of Glasgow" class="nav-logo-img">
                 <span>Kibble Palace</span>
             </div>
             <ul class="nav-menu">
@@ -123,6 +123,23 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Project Planning Assets -->
+            <div class="dailies-assets" data-aos="fade-up" data-aos-delay="400">
+                <div class="asset-grid">
+                    <div class="asset-item">
+                        <h3>User Story Board</h3>
+                        <img src="assets/userstoryboard.jpg" alt="User Story Board" class="asset-image">
+                        <p>Comprehensive user journey mapping and story development process</p>
+                    </div>
+                    <div class="asset-item">
+                        <h3>Prioritization Matrix</h3>
+                        <img src="assets/prioritization_matrix.jpg" alt="Prioritization Matrix" class="asset-image">
+                        <p>Feature prioritization and development roadmap planning</p>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </section>
 
@@ -163,6 +180,7 @@
                     <p>Regular feedback sessions with Kibble Palace staff revealed operational constraints and visitor behavior patterns that significantly influenced our design decisions.</p>
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -181,102 +199,298 @@
                 </div>
                 
                 <div class="tab-content active" id="qr-system">
-                    <div class="prototype-demo">
-                        <div class="phone-mockup">
-                            <div class="phone-screen">
-                                <div class="qr-demo">
-                                    <h3>Mobile Check-in</h3>
-                                    <div class="qr-code" id="qr-code">
-                                        <i class="fas fa-qrcode"></i>
+                    <!-- QR System Overview Header -->
+                    <div class="qr-overview">
+                        <h3>QR Code System Overview</h3>
+                        <p>Seamless mobile check-in experience requiring no app downloads or registrations</p>
+                    </div>
+                    
+                    <!-- Interactive Demo and QR Design -->
+                    <div class="qr-showcase">
+                        <!-- Interactive QR Demo -->
+                        <div class="qr-demo-section">
+                            <div class="section-label">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Interactive Demo</span>
+                            </div>
+                            <div class="phone-mockup">
+                                <div class="phone-screen">
+                                    <div class="qr-demo">
+                                        <h4>Mobile Check-in</h4>
+                                        <div class="qr-code" id="qr-code">
+                                            <i class="fas fa-qrcode"></i>
+                                        </div>
+                                        <p>Scan QR code to check in/out</p>
+                                        <button class="demo-btn" onclick="simulateQRScan()">Simulate Scan</button>
+                                        <div class="scan-result" id="scan-result"></div>
                                     </div>
-                                    <p>Scan QR code to check in/out</p>
-                                    <button class="demo-btn" onclick="simulateQRScan()">Simulate Scan</button>
-                                    <div class="scan-result" id="scan-result"></div>
                                 </div>
                             </div>
+                            <div class="demo-description">
+                                <p>Try the simulate scan button to experience the QR check-in process</p>
+                            </div>
                         </div>
-                        <div class="demo-features">
-                            <h3>QR System Features</h3>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Instant check-in/check-out</li>
-                                <li><i class="fas fa-check"></i> No app download required</li>
-                                <li><i class="fas fa-check"></i> Privacy-focused design</li>
-                                <li><i class="fas fa-check"></i> Works on any smartphone</li>
-                            </ul>
+                        
+                        <!-- QR Code Design Documentation -->
+                        <div class="qr-design-section">
+                            <div class="section-label">
+                                <i class="fab fa-figma"></i>
+                                <span>QR Code Design</span>
+                            </div>
+                            <div class="qr-design-container">
+                                <img src="assets/qrcode.gif" alt="QR Code Design Process" class="qr-design-gif">
+                                <div class="qr-design-badge">
+                                    <i class="fab fa-figma"></i>
+                                    <span>Created in Figma</span>
+                                </div>
+                            </div>
+                            <div class="qr-design-description">
+                                <p>Complete QR code design workflow from wireframes to final implementation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- QR System Features Grid -->
+                    <div class="qr-features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Instant Access</h4>
+                            <p>Immediate check-in/check-out with no waiting time</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>No App Required</h4>
+                            <p>Works with any smartphone camera or QR scanner</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Privacy Focused</h4>
+                            <p>Minimal data collection with GDPR compliance</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-universal-access"></i>
+                            <h4>Universal Compatibility</h4>
+                            <p>Compatible with all modern smartphones and devices</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="tab-content" id="kiosk-system">
-                    <div class="prototype-demo">
-                        <div class="kiosk-mockup">
-                            <div class="kiosk-screen">
-                                <div class="kiosk-interface">
-                                    <h3>Welcome to Kibble Palace</h3>
-                                    <div class="kiosk-options">
-                                        <button class="kiosk-btn check-in" onclick="simulateKioskAction('check-in')">
-                                            <i class="fas fa-sign-in-alt"></i>
-                                            Check In
-                                        </button>
-                                        <button class="kiosk-btn check-out" onclick="simulateKioskAction('check-out')">
-                                            <i class="fas fa-sign-out-alt"></i>
-                                            Check Out
-                                        </button>
+                    <!-- Kiosk Overview Header -->
+                    <div class="kiosk-overview">
+                        <h3>Kiosk System Overview</h3>
+                        <p>Experience our accessible, user-friendly kiosk interface designed for all visitors</p>
+                    </div>
+                    
+                    <!-- Interactive Demo and Figma Design -->
+                    <div class="kiosk-showcase">
+                        <!-- Interactive Kiosk Demo -->
+                        <div class="kiosk-demo-section">
+                            <div class="section-label">
+                                <i class="fas fa-mouse-pointer"></i>
+                                <span>Interactive Demo</span>
+                            </div>
+                            <div class="kiosk-mockup">
+                                <div class="kiosk-screen">
+                                    <div class="kiosk-interface">
+                                        <h4>Welcome to Kibble Palace</h4>
+                                        <div class="kiosk-options">
+                                            <button class="kiosk-btn check-in" onclick="simulateKioskAction('check-in')">
+                                                <i class="fas fa-sign-in-alt"></i>
+                                                Check In
+                                            </button>
+                                            <button class="kiosk-btn check-out" onclick="simulateKioskAction('check-out')">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                                Check Out
+                                            </button>
+                                        </div>
+                                        <div class="visitor-count">
+                                            <span>Current Visitors: <strong id="visitor-count">47</strong></span>
+                                        </div>
+                                        <div class="kiosk-result" id="kiosk-result"></div>
                                     </div>
-                                    <div class="visitor-count">
-                                        <span>Current Visitors: <strong id="visitor-count">47</strong></span>
-                                    </div>
-                                    <div class="kiosk-result" id="kiosk-result"></div>
                                 </div>
                             </div>
+                            <div class="demo-description">
+                                <p>Try the interactive buttons above to simulate the kiosk experience</p>
+                            </div>
                         </div>
-                        <div class="demo-features">
-                            <h3>Kiosk System Features</h3>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Large, accessible interface</li>
-                                <li><i class="fas fa-check"></i> Multi-language support</li>
-                                <li><i class="fas fa-check"></i> Audio assistance available</li>
-                                <li><i class="fas fa-check"></i> Child-friendly height</li>
-                            </ul>
+                        
+                        <!-- Figma Design Documentation -->
+                        <div class="figma-design-section">
+                            <div class="section-label">
+                                <i class="fab fa-figma"></i>
+                                <span>Design Process</span>
+                            </div>
+                            <div class="figma-container">
+                                <img src="assets/manual.gif" alt="Figma Design Process" class="figma-gif">
+                                <div class="figma-badge">
+                                    <i class="fab fa-figma"></i>
+                                    <span>Created in Figma</span>
+                                </div>
+                            </div>
+                            <div class="figma-description">
+                                <p>Complete design workflow from wireframes to final interface prototyping</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kiosk Features Grid -->
+                    <div class="kiosk-features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-universal-access"></i>
+                            <h4>Accessible Design</h4>
+                            <p>Large buttons and clear typography for all users</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-language"></i>
+                            <h4>Multi-language</h4>
+                            <p>Support for multiple languages and audio assistance</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-child"></i>
+                            <h4>Family Friendly</h4>
+                            <p>Child-friendly height and intuitive interface</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>Real-time Updates</h4>
+                            <p>Live visitor count and capacity monitoring</p>
                         </div>
                     </div>
                 </div>
+                </div>
 
                 <div class="tab-content" id="dashboard">
-                    <div class="dashboard-mockup">
-                        <h3>Real-time Analytics Dashboard</h3>
-                        <div class="dashboard-grid">
-                            <div class="dashboard-card">
-                                <h4>Today's Visitors</h4>
-                                <div class="metric">
-                                    <span class="number">247</span>
-                                    <span class="trend up">+12%</span>
-                                </div>
-                            </div>
-                            <div class="dashboard-card">
-                                <h4>Peak Hours</h4>
-                                <div class="metric">
-                                    <span class="number">2-4 PM</span>
-                                    <span class="trend">Average</span>
-                                </div>
-                            </div>
-                            <div class="dashboard-card">
-                                <h4>Avg. Visit Duration</h4>
-                                <div class="metric">
-                                    <span class="number">45 min</span>
-                                    <span class="trend down">-5%</span>
-                                </div>
-                            </div>
-                            <div class="dashboard-card">
-                                <h4>Capacity Usage</h4>
-                                <div class="metric">
-                                    <span class="number">68%</span>
-                                    <span class="trend">Optimal</span>
-                                </div>
-                            </div>
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>Real-time Analytics Dashboard</h3>
                         </div>
-                        <div class="chart-placeholder">
-                            <canvas id="visitor-chart"></canvas>
+                        <!-- Dashboard Layout: Interactive on Top, Figma Below -->
+                        <div class="dashboard-vertical-layout">
+                            <div class="dashboard-interactive-section">
+                                <div class="section-label">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Live Interactive Dashboard</span>
+                                </div>
+                                <!-- Interactive Dashboard Recreation -->
+                                <div class="dashboard-recreation">
+                            <!-- Top Metric Cards -->
+                            <div class="dashboard-metrics">
+                                <div class="metric-card blue" data-metric="visitors">
+                                    <div class="metric-header">
+                                        <span class="metric-title">Total Visitors</span>
+                                        <i class="fas fa-arrow-up metric-icon"></i>
+                                    </div>
+                                    <div class="metric-number">7,265</div>
+                                    <div class="metric-change positive">+11.01%</div>
+                                </div>
+                                <div class="metric-card dark" data-metric="checkins">
+                                    <div class="metric-header">
+                                        <span class="metric-title">Check-ins (Today)</span>
+                                        <i class="fas fa-arrow-up metric-icon"></i>
+                                    </div>
+                                    <div class="metric-number">1,271</div>
+                                    <div class="metric-change negative">-0.03%</div>
+                                </div>
+                                <div class="metric-card blue" data-metric="duration">
+                                    <div class="metric-header">
+                                        <span class="metric-title">Average Duration (Today)</span>
+                                        <i class="fas fa-arrow-up metric-icon"></i>
+                                    </div>
+                                    <div class="metric-number">36</div>
+                                    <div class="metric-change positive">+15.03%</div>
+                                </div>
+                                <div class="metric-card dark" data-metric="occupancy">
+                                    <div class="metric-header">
+                                        <span class="metric-title">Occupancy (Live)</span>
+                                        <i class="fas fa-arrow-up metric-icon"></i>
+                                    </div>
+                                    <div class="metric-number">126</div>
+                                    <div class="metric-change positive">+6.08%</div>
+                                </div>
+                            </div>
+
+                            <!-- Visitor Counts Chart -->
+                            <div class="chart-section">
+                                <div class="chart-header">
+                                    <h4>Visitor Counts</h4>
+                                    <div class="chart-controls">
+                                        <span class="chart-period active">Week</span>
+                                        <i class="fas fa-chart-line"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                                <div class="line-chart">
+                                    <canvas id="visitor-line-chart" width="600" height="200"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Charts Row -->
+                            <div class="bottom-charts">
+                                <div class="chart-section half">
+                                    <div class="chart-header">
+                                        <h4>Visitor Time Slots</h4>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="bar-chart">
+                                        <canvas id="time-slots-chart" width="300" height="200"></canvas>
+                                    </div>
+                                </div>
+                                <div class="chart-section half">
+                                    <div class="chart-header">
+                                        <h4>Visitor Demographics</h4>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="bar-chart">
+                                        <canvas id="demographics-chart" width="300" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footfall Traffic Chart -->
+                            <div class="chart-section">
+                                <div class="chart-header">
+                                    <h4>Footfall Traffic and Duration</h4>
+                                    <div class="chart-legend">
+                                        <span class="legend-item">
+                                            <span class="legend-dot manual"></span>Manual Entry
+                                        </span>
+                                        <span class="legend-item">
+                                            <span class="legend-dot qr"></span>QR Code
+                                        </span>
+                                        <span class="legend-item">
+                                            <span class="legend-dot duration"></span>Average Duration Spent
+                                        </span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-chart">
+                                    <canvas id="footfall-chart" width="600" height="150"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-design-section">
+                                <div class="design-process-header">
+                                    <div class="section-label">
+                                        <i class="fab fa-figma"></i>
+                                        <span>Design Process</span>
+                                    </div>
+                                    <h3>Dashboard Design Workflow</h3>
+                                    <p class="process-subtitle">Complete dashboard design workflow showcasing real-time visitor analytics and management insights</p>
+                                </div>
+                                
+                                <div class="dashboard-showcase">
+                                    <div class="dashboard-container">
+                                        <img src="assets/dashboard.png" alt="Dashboard Design Process" class="dashboard-gif">
+                                        <div class="dashboard-badge">
+                                            <i class="fab fa-figma"></i>
+                                            <span>Created in Figma</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -372,6 +586,16 @@
                     <div class="member-info">
                         <h3>Lim Liang Fan</h3>
                         <p class="role">Technical Lead / Developer</p>
+                        <div class="social-links">
+                            <a href="https://github.com/liangfannn" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/liangfannn/" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -384,6 +608,16 @@
                     <div class="member-info">
                         <h3>Ho Zhen Xian</h3>
                         <p class="role">Technical Lead / Developer</p>
+                        <div class="social-links">
+                            <a href="https://github.com/zhenxian3" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/zhenxian/" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -396,6 +630,12 @@
                     <div class="member-info">
                         <h3>Sean Nicholas Tanu Sukumaran</h3>
                         <p class="role">Documentation Lead</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/seannich/" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -408,6 +648,12 @@
                     <div class="member-info">
                         <h3>Darren Tan Xi Pin</h3>
                         <p class="role">Editor / QA</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/darrentxp/" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -420,6 +666,16 @@
                     <div class="member-info">
                         <h3>Lim Jing Chuan Jonathan</h3>
                         <p class="role">Research Lead</p>
+                        <div class="social-links">
+                            <a href="https://github.com/jonathanljc" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ljcjonathan/" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -444,7 +700,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Kibble Palace Visitor Tracking Solution. Student Project - University of Glasgow.</p>
+                <p>&copy; 2025 Kibble Palace Visitor Tracking Solution. Student Project - University of Glasgow. <img src="assets/UoG_colour.png" alt="University of Glasgow" class="footer-uni-logo"></p>
             </div>
         </div>
     </footer>

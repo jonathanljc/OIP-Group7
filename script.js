@@ -457,9 +457,10 @@ document.addEventListener('DOMContentLoaded', addFloatingAnimation);
 // Add dynamic dashboard updates
 function updateDashboardMetrics() {
     const metrics = [
-        { selector: '.dashboard-card:nth-child(1) .number', baseValue: 247, variance: 20 },
-        { selector: '.dashboard-card:nth-child(3) .number', baseValue: 45, variance: 10 },
-        { selector: '.dashboard-card:nth-child(4) .number', baseValue: 68, variance: 15 }
+        { selector: '.metric-card[data-metric="visitors"] .metric-number', baseValue: 7265, variance: 50, suffix: '' },
+        { selector: '.metric-card[data-metric="checkins"] .metric-number', baseValue: 1271, variance: 30, suffix: '' },
+        { selector: '.metric-card[data-metric="duration"] .metric-number', baseValue: 36, variance: 5, suffix: '' },
+        { selector: '.metric-card[data-metric="occupancy"] .metric-number', baseValue: 126, variance: 15, suffix: '' }
     ];
     
     setInterval(() => {
@@ -468,18 +469,327 @@ function updateDashboardMetrics() {
             if (element) {
                 const variation = (Math.random() - 0.5) * metric.variance;
                 const newValue = Math.round(metric.baseValue + variation);
-                
-                if (metric.selector.includes('nth-child(4)')) {
-                    element.textContent = newValue + '%';
-                } else if (metric.selector.includes('nth-child(3)')) {
-                    element.textContent = newValue + ' min';
-                } else {
-                    element.textContent = newValue;
-                }
+                element.textContent = newValue.toLocaleString() + metric.suffix;
             }
         });
-    }, 5000);
+        
+        // Redraw charts with slight variations
+        drawVisitorLineChart();
+        drawTimeSlotsChart();
+        drawDemographicsChart();
+        drawFootfallChart();
+    }, 8000);
 }
 
-// Initialize dashboard updates
-document.addEventListener('DOMContentLoaded', updateDashboardMetrics);
+// Add dashboard feature interactions
+function initializeDashboardInteractions() {
+    const metricCards = document.querySelectorAll('.metric-card');
+    
+    metricCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const metric = this.getAttribute('data-metric');
+            showMetricDetails(metric);
+        });
+    });
+    
+    // Initialize all charts
+    initializeCharts();
+}
+
+// Initialize all dashboard charts
+function initializeCharts() {
+    // Add a small delay to ensure DOM is fully loaded
+    setTimeout(() => {
+        drawVisitorLineChart();
+        drawTimeSlotsChart();
+        drawDemographicsChart();
+        drawFootfallChart();
+        addChartInteractivity();
+    }, 100);
+}
+
+// Add interactivity to charts
+function addChartInteractivity() {
+    // Add click handlers to chart sections
+    const chartSections = document.querySelectorAll('.chart-section');
+    chartSections.forEach(section => {
+        section.addEventListener('click', function() {
+            const chartTitle = this.querySelector('h4').textContent;
+            showChartDetails(chartTitle);
+        });
+        
+        section.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+        });
+        
+        section.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        });
+    });
+}
+
+function showChartDetails(chartTitle) {
+    const details = {
+        'Visitor Counts': 'Weekly visitor trends showing seasonal patterns and growth over time.',
+        'Visitor Time Slots': 'Peak visiting hours analysis - 12pm-2pm shows highest traffic with 106 visitors.',
+        'Visitor Demographics': 'Geographic distribution of visitors - Japan leads with 200 visitors.',
+        'Footfall Traffic and Duration': 'Comparison of entry methods and average visit duration throughout the year.'
+    };
+    
+    const detail = details[chartTitle];
+    if (detail) {
+        alert(`${chartTitle}\n\n${detail}`);
+    }
+}
+
+// Draw the purple visitor counts line chart
+function drawVisitorLineChart() {
+    const canvas = document.getElementById('visitor-line-chart');
+    if (!canvas) return;
+    
+    // Set canvas size properly
+    canvas.style.width = '100%';
+    canvas.style.height = '200px';
+    canvas.width = canvas.offsetWidth;
+    canvas.height = 200;
+    
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    
+    // Clear canvas
+    ctx.clearRect(0, 0, width, height);
+    
+    // Chart data points (matching your Figma design)
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+    const data = [120, 80, 95, 180, 140, 160];
+    const maxValue = Math.max(...data);
+    
+    // Draw grid lines
+    ctx.strokeStyle = '#f3f4f6';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 5; i++) {
+        const y = (height - 60) * (i / 5) + 30;
+        ctx.beginPath();
+        ctx.moveTo(50, y);
+        ctx.lineTo(width - 30, y);
+        ctx.stroke();
+    }
+    
+    // Draw the purple line
+    ctx.strokeStyle = '#8b5cf6';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    
+    data.forEach((value, index) => {
+        const x = 50 + (index * (width - 80) / (data.length - 1));
+        const y = height - 60 - ((value / maxValue) * (height - 90));
+        
+        if (index === 0) {
+            ctx.moveTo(x, y);
+        } else {
+            ctx.lineTo(x, y);
+        }
+        
+        // Draw data points
+        ctx.fillStyle = '#8b5cf6';
+        ctx.beginPath();
+        ctx.arc(x, y, 4, 0, 2 * Math.PI);
+        ctx.fill();
+    });
+    ctx.stroke();
+    
+    // Draw month labels
+    ctx.fillStyle = '#6b7280';
+    ctx.font = '12px Inter';
+    ctx.textAlign = 'center';
+    months.forEach((month, index) => {
+        const x = 50 + (index * (width - 80) / (months.length - 1));
+        ctx.fillText(month, x, height - 20);
+    });
+}
+
+// Draw visitor time slots bar chart
+function drawTimeSlotsChart() {
+    const canvas = document.getElementById('time-slots-chart');
+    if (!canvas) return;
+    
+    // Set canvas size properly
+    canvas.style.width = '100%';
+    canvas.style.height = '200px';
+    canvas.width = canvas.offsetWidth;
+    canvas.height = 200;
+    
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    
+    ctx.clearRect(0, 0, width, height);
+    
+    const timeSlots = ['10am-12pm', '12pm-2pm', '2pm-4pm', '4pm-6pm', '6pm onwards'];
+    const values = [60, 106, 80, 40, 30];
+    const maxValue = Math.max(...values);
+    
+    const barWidth = (width - 100) / timeSlots.length;
+    
+    values.forEach((value, index) => {
+        const x = 50 + (index * barWidth) + (barWidth * 0.2);
+        const barHeight = (value / maxValue) * (height - 80);
+        const y = height - 60 - barHeight;
+        
+        // Draw bar
+        ctx.fillStyle = index === 1 ? '#3b82f6' : '#e5e7eb';
+        ctx.fillRect(x, y, barWidth * 0.6, barHeight);
+        
+        // Draw value label for highlighted bar
+        if (index === 1) {
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 12px Inter';
+            ctx.textAlign = 'center';
+            ctx.fillText(value.toString(), x + (barWidth * 0.3), y - 10);
+        }
+        
+        // Draw time slot labels
+        ctx.fillStyle = '#6b7280';
+        ctx.font = '10px Inter';
+        ctx.textAlign = 'center';
+        ctx.fillText(timeSlots[index], x + (barWidth * 0.3), height - 20);
+    });
+}
+
+// Draw visitor demographics chart
+function drawDemographicsChart() {
+    const canvas = document.getElementById('demographics-chart');
+    if (!canvas) return;
+    
+    // Set canvas size properly
+    canvas.style.width = '100%';
+    canvas.style.height = '200px';
+    canvas.width = canvas.offsetWidth;
+    canvas.height = 200;
+    
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    
+    ctx.clearRect(0, 0, width, height);
+    
+    const demographics = ['JS', 'Canada', 'Mexico', 'China', 'Japan', 'Australia'];
+    const values = [80, 120, 90, 60, 200, 70];
+    const maxValue = Math.max(...values);
+    
+    const barWidth = (width - 100) / demographics.length;
+    
+    values.forEach((value, index) => {
+        const x = 50 + (index * barWidth) + (barWidth * 0.2);
+        const barHeight = (value / maxValue) * (height - 80);
+        const y = height - 60 - barHeight;
+        
+        // Draw bar
+        ctx.fillStyle = index === 4 ? '#3b82f6' : '#e5e7eb';
+        ctx.fillRect(x, y, barWidth * 0.6, barHeight);
+        
+        // Draw value label for highlighted bar
+        if (index === 4) {
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 12px Inter';
+            ctx.textAlign = 'center';
+            ctx.fillText(value.toString(), x + (barWidth * 0.3), y - 10);
+        }
+        
+        // Draw demographic labels
+        ctx.fillStyle = '#6b7280';
+        ctx.font = '10px Inter';
+        ctx.textAlign = 'center';
+        ctx.fillText(demographics[index], x + (barWidth * 0.3), height - 20);
+    });
+}
+
+// Draw footfall traffic timeline chart
+function drawFootfallChart() {
+    const canvas = document.getElementById('footfall-chart');
+    if (!canvas) return;
+    
+    // Set canvas size properly
+    canvas.style.width = '100%';
+    canvas.style.height = '150px';
+    canvas.width = canvas.offsetWidth;
+    canvas.height = 150;
+    
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    
+    ctx.clearRect(0, 0, width, height);
+    
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const barWidth = (width - 100) / months.length;
+    
+    months.forEach((month, index) => {
+        const x = 50 + (index * barWidth);
+        
+        // Generate random heights for the three types of data
+        const manualHeight = Math.random() * 60 + 20;
+        const qrHeight = Math.random() * 40 + 10;
+        const durationHeight = Math.random() * 30 + 10;
+        
+        // Draw manual entry bars (red)
+        ctx.fillStyle = '#ef4444';
+        ctx.fillRect(x, height - 40 - manualHeight, barWidth * 0.25, manualHeight);
+        
+        // Draw QR code bars (blue)
+        ctx.fillStyle = '#3b82f6';
+        ctx.fillRect(x + (barWidth * 0.3), height - 40 - qrHeight, barWidth * 0.25, qrHeight);
+        
+        // Draw duration bars (purple)
+        ctx.fillStyle = '#8b5cf6';
+        ctx.fillRect(x + (barWidth * 0.6), height - 40 - durationHeight, barWidth * 0.25, durationHeight);
+        
+        // Draw month labels
+        ctx.fillStyle = '#6b7280';
+        ctx.font = '10px Inter';
+        ctx.textAlign = 'center';
+        ctx.fillText(month, x + (barWidth * 0.5), height - 10);
+    });
+}
+
+function showMetricDetails(metric) {
+    const details = {
+        visitors: {
+            title: 'Total Visitors',
+            description: 'Cumulative visitor count tracked through QR code check-ins and manual entries.',
+            insights: ['Peak season: Summer months', 'Average daily: 245 visitors', 'Growth rate: +11% this month']
+        },
+        checkins: {
+            title: 'Daily Check-ins',
+            description: 'Real-time check-ins for today through the digital tracking system.',
+            insights: ['Current time: 2:30 PM', 'Peak hours: 11 AM - 3 PM', 'Digital adoption: 85%']
+        },
+        duration: {
+            title: 'Average Visit Duration',
+            description: 'Mean time spent by visitors in the Kibble Palace greenhouse.',
+            insights: ['Optimal range: 30-45 minutes', 'Educational tours: 60+ minutes', 'Quick visits: 15-20 minutes']
+        },
+        occupancy: {
+            title: 'Current Occupancy',
+            description: 'Real-time count of visitors currently inside the greenhouse.',
+            insights: ['Capacity: 200 visitors', 'Current level: 63%', 'Status: Optimal']
+        }
+    };
+    
+    const detail = details[metric];
+    if (detail) {
+        const message = `${detail.title}\n\n${detail.description}\n\nKey Insights:\n${detail.insights.join('\n')}`;
+        alert(message);
+    }
+}
+
+// Removed interactive workflow overlay functionality
+
+// Initialize dashboard updates and interactions
+document.addEventListener('DOMContentLoaded', function() {
+    updateDashboardMetrics();
+    initializeDashboardInteractions();
+});
