@@ -1,27 +1,496 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Dashboard</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kibble Palace Visitor Tracking Solution</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Interactive Dashboard</h1>
-  <canvas id="myChart" width="400" height="200"></canvas>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>Kibble Palace</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#dailies" class="nav-link">Dailies</a></li>
+                <li><a href="#reflection" class="nav-link">Reflection</a></li>
+                <li><a href="#prototype" class="nav-link">Prototype</a></li>
+                <li><a href="#final-product" class="nav-link">Final Product</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-  <script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3],
-          backgroundColor: ['red', 'blue', 'yellow']
-        }]
-      }
-    });
-  </script>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="assets/Kibble_Palace.jpg" alt="Kibble Palace" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Kibble Palace<br><span class="highlight">Visitor Tracking Solution</span></h1>
+                <p class="hero-subtitle">Revolutionizing visitor management in Glasgow's iconic Victorian greenhouse through innovative digital solutions</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('prototype')">
+                        <i class="fas fa-play"></i> View Prototype
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('about')">
+                        <i class="fas fa-users"></i> Meet the Team
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">150K+</div>
+                    <div class="stat-label">Annual Visitors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Monitoring</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Contactless</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Dailies Section -->
+    <section id="dailies" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Dailies</h2>
+                <p class="section-subtitle">Daily progress logs, updates, and development milestones</p>
+            </div>
+            <div class="dailies-timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">Week 1</div>
+                    <div class="timeline-content">
+                        <h3>Project Initiation & Research</h3>
+                        <p>Initial stakeholder meetings with Kibble Palace management. Conducted visitor flow analysis and identified key pain points in current manual tracking system.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Stakeholder Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-date">Week 2</div>
+                    <div class="timeline-content">
+                        <h3>User Journey Mapping</h3>
+                        <p>Created detailed user personas and journey maps. Identified accessibility requirements for elderly visitors and families with children.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">UX Design</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-date">Week 3</div>
+                    <div class="timeline-content">
+                        <h3>Technical Architecture</h3>
+                        <p>Designed system architecture combining QR code technology with kiosk stations. Developed data flow diagrams and security protocols.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Architecture</span>
+                            <span class="tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-date">Week 4</div>
+                    <div class="timeline-content">
+                        <h3>Prototype Development</h3>
+                        <p>Built interactive prototypes for both mobile QR system and kiosk interface. Conducted initial user testing with focus groups.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Prototyping</span>
+                            <span class="tag">User Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflection Section -->
+    <section id="reflection" class="section reflection-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Reflection</h2>
+                <p class="section-subtitle">Insights gained, challenges overcome, and lessons learned</p>
+            </div>
+            <div class="reflection-grid">
+                <div class="reflection-card" data-aos="fade-up">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Key Insights</h3>
+                    <p>Discovered that 40% of visitors are elderly or families with young children who prefer physical interfaces over mobile apps. This led us to develop a dual-approach solution.</p>
+                </div>
+                <div class="reflection-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Challenges Faced</h3>
+                    <p>Balancing modern technology with accessibility requirements. Ensuring data privacy compliance while maintaining seamless user experience across different age groups.</p>
+                </div>
+                <div class="reflection-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Evolution of Understanding</h3>
+                    <p>Initially focused solely on mobile solutions, but stakeholder feedback revealed the need for inclusive design. This shifted our approach to a hybrid system.</p>
+                </div>
+                <div class="reflection-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Stakeholder Learnings</h3>
+                    <p>Regular feedback sessions with Kibble Palace staff revealed operational constraints and visitor behavior patterns that significantly influenced our design decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prototype Section -->
+    <section id="prototype" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Interactive Prototype</h2>
+                <p class="section-subtitle">Experience our dual-approach visitor tracking system</p>
+            </div>
+            <div class="prototype-showcase">
+                <div class="prototype-tabs">
+                    <button class="tab-btn active" data-tab="qr-system">QR Code System</button>
+                    <button class="tab-btn" data-tab="kiosk-system">Kiosk System</button>
+                    <button class="tab-btn" data-tab="dashboard">Data Dashboard</button>
+                </div>
+                
+                <div class="tab-content active" id="qr-system">
+                    <div class="prototype-demo">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="qr-demo">
+                                    <h3>Mobile Check-in</h3>
+                                    <div class="qr-code" id="qr-code">
+                                        <i class="fas fa-qrcode"></i>
+                                    </div>
+                                    <p>Scan QR code to check in/out</p>
+                                    <button class="demo-btn" onclick="simulateQRScan()">Simulate Scan</button>
+                                    <div class="scan-result" id="scan-result"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-features">
+                            <h3>QR System Features</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Instant check-in/check-out</li>
+                                <li><i class="fas fa-check"></i> No app download required</li>
+                                <li><i class="fas fa-check"></i> Privacy-focused design</li>
+                                <li><i class="fas fa-check"></i> Works on any smartphone</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="kiosk-system">
+                    <div class="prototype-demo">
+                        <div class="kiosk-mockup">
+                            <div class="kiosk-screen">
+                                <div class="kiosk-interface">
+                                    <h3>Welcome to Kibble Palace</h3>
+                                    <div class="kiosk-options">
+                                        <button class="kiosk-btn check-in" onclick="simulateKioskAction('check-in')">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            Check In
+                                        </button>
+                                        <button class="kiosk-btn check-out" onclick="simulateKioskAction('check-out')">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            Check Out
+                                        </button>
+                                    </div>
+                                    <div class="visitor-count">
+                                        <span>Current Visitors: <strong id="visitor-count">47</strong></span>
+                                    </div>
+                                    <div class="kiosk-result" id="kiosk-result"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-features">
+                            <h3>Kiosk System Features</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Large, accessible interface</li>
+                                <li><i class="fas fa-check"></i> Multi-language support</li>
+                                <li><i class="fas fa-check"></i> Audio assistance available</li>
+                                <li><i class="fas fa-check"></i> Child-friendly height</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="dashboard">
+                    <div class="dashboard-mockup">
+                        <h3>Real-time Analytics Dashboard</h3>
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <h4>Today's Visitors</h4>
+                                <div class="metric">
+                                    <span class="number">247</span>
+                                    <span class="trend up">+12%</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Peak Hours</h4>
+                                <div class="metric">
+                                    <span class="number">2-4 PM</span>
+                                    <span class="trend">Average</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Avg. Visit Duration</h4>
+                                <div class="metric">
+                                    <span class="number">45 min</span>
+                                    <span class="trend down">-5%</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Capacity Usage</h4>
+                                <div class="metric">
+                                    <span class="number">68%</span>
+                                    <span class="trend">Optimal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <canvas id="visitor-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Product Section -->
+    <section id="final-product" class="section final-product-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Final Product Overview</h2>
+                <p class="section-subtitle">Complete system architecture and value proposition</p>
+            </div>
+            <div class="product-overview">
+                <div class="architecture-diagram" data-aos="fade-up">
+                    <h3>System Architecture</h3>
+                    <div class="diagram">
+                        <div class="diagram-layer">
+                            <div class="layer-title">User Interface Layer</div>
+                            <div class="layer-components">
+                                <div class="component">Mobile QR Scanner</div>
+                                <div class="component">Kiosk Interface</div>
+                                <div class="component">Admin Dashboard</div>
+                            </div>
+                        </div>
+                        <div class="diagram-layer">
+                            <div class="layer-title">Application Layer</div>
+                            <div class="layer-components">
+                                <div class="component">Check-in/out Service</div>
+                                <div class="component">Analytics Engine</div>
+                                <div class="component">Notification System</div>
+                            </div>
+                        </div>
+                        <div class="diagram-layer">
+                            <div class="layer-title">Data Layer</div>
+                            <div class="layer-components">
+                                <div class="component">Visitor Database</div>
+                                <div class="component">Analytics Store</div>
+                                <div class="component">Configuration DB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="data-flow" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Data Flow Process</h3>
+                    <div class="flow-steps">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Visitor Arrival</h4>
+                                <p>Visitor chooses QR code or kiosk check-in method</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Data Capture</h4>
+                                <p>System records timestamp, entry method, and generates unique session ID</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Real-time Processing</h4>
+                                <p>Analytics engine updates visitor counts and capacity metrics</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Dashboard Update</h4>
+                                <p>Staff dashboard reflects current occupancy and trends</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-proposition" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Value Delivered</h3>
+                    <div class="value-grid">
+                        <div class="value-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Data-Driven Insights</h4>
+                            <p>Real-time visitor analytics enable better resource allocation and crowd management</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-universal-access"></i>
+                            <h4>Universal Accessibility</h4>
+                            <p>Dual-interface design ensures all visitors can participate regardless of technical ability</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Privacy Protection</h4>
+                            <p>GDPR-compliant system with minimal data collection and automatic purging</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-cogs"></i>
+                            <h4>Operational Efficiency</h4>
+                            <p>Automated tracking reduces staff workload and improves visitor experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">The creative minds behind the Kibble Palace solution</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Alex Thompson</h3>
+                        <p class="role">Project Lead & UX Designer</p>
+                        <p class="bio">Passionate about creating inclusive digital experiences. Led the user research and interface design for both mobile and kiosk systems.</p>
+                        <div class="member-skills">
+                            <span class="skill">UX Design</span>
+                            <span class="skill">User Research</span>
+                            <span class="skill">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Chen</h3>
+                        <p class="role">Technical Architect</p>
+                        <p class="bio">Systems thinking specialist who designed the robust, scalable architecture. Focused on security and data privacy implementation.</p>
+                        <div class="member-skills">
+                            <span class="skill">System Architecture</span>
+                            <span class="skill">Security</span>
+                            <span class="skill">Database Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Marcus Rodriguez</h3>
+                        <p class="role">Frontend Developer</p>
+                        <p class="bio">Creative developer who brought the prototypes to life. Specialized in accessible interfaces and smooth user interactions.</p>
+                        <div class="member-skills">
+                            <span class="skill">Frontend Development</span>
+                            <span class="skill">Accessibility</span>
+                            <span class="skill">Animation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-photo">
+                        <div class="photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Emma Wilson</h3>
+                        <p class="role">Data Analyst & Researcher</p>
+                        <p class="bio">Analytics expert who designed the dashboard and insights framework. Conducted stakeholder interviews and user testing sessions.</p>
+                        <div class="member-skills">
+                            <span class="skill">Data Analysis</span>
+                            <span class="skill">Research</span>
+                            <span class="skill">Visualization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Kibble Palace Project</h3>
+                    <p>A student innovation project for Glasgow's iconic Victorian greenhouse, creating inclusive visitor tracking solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>University</h3>
+                    <p>University of Glasgow<br>School of Computing Science<br>Human-Computer Interaction</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>For inquiries about this project:<br>kibblepalace@student.gla.ac.uk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kibble Palace Visitor Tracking Solution. Student Project - University of Glasgow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
