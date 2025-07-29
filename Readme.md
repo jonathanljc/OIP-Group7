@@ -30,6 +30,3 @@ Hosted via GitHub Pages, this site documents our **full design journey**, includ
 - Darren Tan Xi Pin
 - Lim Jing Chuan Jonathan
 
----
-
-
