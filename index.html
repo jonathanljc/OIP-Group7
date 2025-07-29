@@ -17,10 +17,12 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#dailies" class="nav-link">Dailies</a></li>
-                <li><a href="#reflection" class="nav-link">Reflection</a></li>
+                <li><a href="#problem" class="nav-link">Problem</a></li>
+                <li><a href="#solution" class="nav-link">Solution</a></li>
+                <li><a href="#design-journey" class="nav-link">Design Journey</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#prototype" class="nav-link">Prototype</a></li>
-                <li><a href="#final-product" class="nav-link">Final Product</a></li>
+                <li><a href="#reflection" class="nav-link">Reflection</a></li>
                 <li><a href="#about" class="nav-link">About Us</a></li>
             </ul>
             <div class="hamburger">
@@ -70,75 +72,393 @@
         </div>
     </section>
 
-    <!-- Dailies Section -->
-    <section id="dailies" class="section">
+    <!-- Problem Statement Section -->
+    <section id="problem" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Project Dailies</h2>
-                <p class="section-subtitle">Daily progress logs, updates, and development milestones</p>
+                <h2 class="section-title">Problem Statement</h2>
+                <p class="section-subtitle">Understanding the challenge at Kibble Palace</p>
             </div>
-            <div class="dailies-timeline">
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-date">Week 1</div>
-                    <div class="timeline-content">
-                        <h3>Project Initiation & Research</h3>
-                        <p>Initial stakeholder meetings with Kibble Palace management. Conducted visitor flow analysis and identified key pain points in current manual tracking system.</p>
-                        <div class="timeline-tags">
-                            <span class="tag">Research</span>
-                            <span class="tag">Stakeholder Analysis</span>
-                        </div>
+            <div class="problem-content">
+                <div class="problem-overview" data-aos="fade-up">
+                    <div class="problem-text">
+                        <h3>The Challenge</h3>
+                        <p>The Kibble Palace, a heritage-listed 19th-century glasshouse in Glasgow Botanic Gardens, attracts a wide range of local and international visitors but currently lacks a reliable, accurate, and low-cost method to track visitor footfall.</p>
+                        
+                        <h4>Previous Attempts</h4>
+                        <p>While previous attempts such as cellphone signal tracking were explored, these proved inaccurate and unreliable for gathering meaningful visitor data.</p>
+                        
+                        <h4>Critical Need</h4>
+                        <p>Accurate visitor data — including metrics like peak times, seasonal trends, and basic demographics — is crucial for supporting budget allocation decisions, especially as city council funding continues to decline due to competing priorities like education.</p>
                     </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-date">Week 2</div>
-                    <div class="timeline-content">
-                        <h3>User Journey Mapping</h3>
-                        <p>Created detailed user personas and journey maps. Identified accessibility requirements for elderly visitors and families with children.</p>
-                        <div class="timeline-tags">
-                            <span class="tag">UX Design</span>
-                            <span class="tag">Accessibility</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-date">Week 3</div>
-                    <div class="timeline-content">
-                        <h3>Technical Architecture</h3>
-                        <p>Designed system architecture combining QR code technology with kiosk stations. Developed data flow diagrams and security protocols.</p>
-                        <div class="timeline-tags">
-                            <span class="tag">Architecture</span>
-                            <span class="tag">Security</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-date">Week 4</div>
-                    <div class="timeline-content">
-                        <h3>Prototype Development</h3>
-                        <p>Built interactive prototypes for both mobile QR system and kiosk interface. Conducted initial user testing with focus groups.</p>
-                        <div class="timeline-tags">
-                            <span class="tag">Prototyping</span>
-                            <span class="tag">User Testing</span>
+                    <div class="problem-requirements">
+                        <h3>Solution Requirements</h3>
+                        <div class="requirement-list">
+                            <div class="requirement-item">
+                                <i class="fas fa-eye-slash"></i>
+                                <span>Discreet implementation</span>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-bullseye"></i>
+                                <span>High accuracy</span>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Comprehensive metrics</span>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-users"></i>
+                                <span>Demographics capture</span>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>Cost-effective</span>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-landmark"></i>
+                                <span>Heritage site compliant</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Project Planning Assets -->
-            <div class="dailies-assets" data-aos="fade-up" data-aos-delay="400">
-                <div class="asset-grid">
-                    <div class="asset-item">
-                        <h3>User Story Board</h3>
-                        <img src="assets/userstoryboard.jpg" alt="User Story Board" class="asset-image">
-                        <p>Comprehensive user journey mapping and story development process</p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="section solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proposed Solution</h2>
+                <p class="section-subtitle">QR Code & Kiosk-Based Visitor Tracking</p>
+            </div>
+            <div class="solution-content">
+                <div class="solution-overview" data-aos="fade-up">
+                    <h3>Hybrid Approach</h3>
+                    <p>We propose a dual-method solution that combines modern technology with accessibility considerations:</p>
+                    
+                    <div class="solution-methods">
+                        <div class="method-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="method-icon">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                            <h4>Voluntary QR Code Check-In</h4>
+                            <p>Smartphone users can quickly scan QR codes at the entrance for instant check-in/out</p>
+                        </div>
+                        
+                        <div class="method-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="method-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h4>Discreet Kiosk Station</h4>
+                            <p>Alternative interface for visitors without smartphones or those preferring physical interaction</p>
+                        </div>
+                        
+                        <div class="method-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="method-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Visual Analytics Dashboard</h4>
+                            <p>Real-time data visualization for staff to monitor visitor patterns and trends</p>
+                        </div>
                     </div>
-                    <div class="asset-item">
-                        <h3>Prioritization Matrix</h3>
-                        <img src="assets/prioritization_matrix.jpg" alt="Prioritization Matrix" class="asset-image">
-                        <p>Feature prioritization and development roadmap planning</p>
+                </div>
+                
+                <div class="solution-features" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-tools"></i>
+                            <h4>No Structural Modifications</h4>
+                            <p>Respects heritage building constraints</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-piggy-bank"></i>
+                            <h4>Cost-Effective</h4>
+                            <p>Leverages free tools like Google Forms, Airtable</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user-secret"></i>
+                            <h4>Privacy-Focused</h4>
+                            <p>Anonymous check-in option available</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>Real-Time Tracking</h4>
+                            <p>Visitor flow and peak time analysis</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <h4>Future-Ready</h4>
+                            <p>Expandable for multilingual support</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-universal-access"></i>
+                            <h4>Accessible Design</h4>
+                            <p>Works for all visitor demographics</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="justification-table" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Solution Justification</h3>
+                    <div class="table-container">
+                        <table class="justification-grid">
+                            <thead>
+                                <tr>
+                                    <th>Criterion</th>
+                                    <th>QR & Kiosk Solution Benefit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Accuracy Requirement</strong></td>
+                                    <td>Allows timestamped, voluntary data input</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Budget Constraint</strong></td>
+                                    <td>Minimal cost – uses free or low-cost tech</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Discreet Hardware</strong></td>
+                                    <td>No installation on or near the building</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Listed Building Compliance</strong></td>
+                                    <td>Non-invasive and respects heritage rules</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Usability</strong></td>
+                                    <td>Accessible to all visitors (with or without phones)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="justification-summary">This balances user-centric design with feasibility and heritage constraints, while giving stakeholders a scalable base for visitor analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Journey Section -->
+    <section id="design-journey" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Design Journey</h2>
+                <p class="section-subtitle">Key aspects of our design process and team collaboration</p>
+            </div>
+            <div class="design-journey-content">
+                <div class="journey-overview" data-aos="fade-up">
+                    <h3>User-Centric Problem Statement</h3>
+                    <p>Our design process began with extensive stakeholder engagement and user research to understand the diverse needs of Kibble Palace visitors, from tech-savvy tourists to elderly locals and families with young children.</p>
+                </div>
+                
+                <div class="journey-grid">
+                    <div class="journey-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="journey-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Pre-existing Solutions Analysis</h4>
+                        <p>Researched existing visitor tracking methods including manual counters, infrared sensors, and cellphone signal tracking. Identified gaps in accuracy, cost-effectiveness, and heritage site compliance.</p>
+                    </div>
+                    
+                    <div class="journey-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="journey-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Ideation Process</h4>
+                        <p>Conducted brainstorming sessions using design thinking methodologies. Explored solutions from RFID tags to computer vision before converging on the QR/Kiosk hybrid approach.</p>
+                    </div>
+                    
+                    <div class="journey-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="journey-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h4>Prototypes Built</h4>
+                        <p>Developed multiple iterations including paper prototypes, Figma wireframes, interactive mockups, and functional demos. Each iteration incorporated user feedback and stakeholder requirements.</p>
+                    </div>
+                    
+                    <div class="journey-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="journey-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h4>Team Composition</h4>
+                        <p>Multidisciplinary team combining technical development, UX research, documentation, quality assurance, and stakeholder engagement expertise to deliver a comprehensive solution.</p>
+                    </div>
+                </div>
+                
+                <div class="ideas-explored" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Ideas Explored</h3>
+                    <div class="ideas-timeline">
+                        <div class="idea-item">
+                            <div class="idea-number">1</div>
+                            <div class="idea-content">
+                                <h4>Computer Vision Tracking</h4>
+                                <p>Initially considered camera-based people counting but rejected due to privacy concerns and heritage site restrictions.</p>
+                            </div>
+                        </div>
+                        <div class="idea-item">
+                            <div class="idea-number">2</div>
+                            <div class="idea-content">
+                                <h4>RFID Badge System</h4>
+                                <p>Explored providing visitors with RFID badges but deemed too costly and logistically complex for voluntary tracking.</p>
+                            </div>
+                        </div>
+                        <div class="idea-item">
+                            <div class="idea-number">3</div>
+                            <div class="idea-content">
+                                <h4>Mobile App Solution</h4>
+                                <p>Considered dedicated mobile app but realized accessibility barriers for elderly visitors and app download friction.</p>
+                            </div>
+                        </div>
+                        <div class="idea-item">
+                            <div class="idea-number">4</div>
+                            <div class="idea-content">
+                                <h4>Hybrid QR/Kiosk Approach</h4>
+                                <p>Final solution combining smartphone accessibility with physical interface options, ensuring inclusive design for all visitor demographics.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Portfolio</h2>
+                <p class="section-subtitle">Documentation of our work process and stakeholder engagement</p>
+            </div>
+            <div class="portfolio-content">
+                <div class="portfolio-grid">
+                    <div class="portfolio-category" data-aos="fade-up">
+                        <div class="category-header">
+                            <i class="fas fa-video"></i>
+                            <h3>Weekly Pitch Videos</h3>
+                        </div>
+                        <div class="portfolio-items">
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Week 1: Problem Definition</h4>
+                                    <p>Initial problem presentation and stakeholder requirements analysis</p>
+                                    <a href="#" class="item-link">View Video</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Week 2: Solution Ideation</h4>
+                                    <p>Brainstorming session results and initial concept validation</p>
+                                    <a href="#" class="item-link">View Video</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Week 3: Prototype Demo</h4>
+                                    <p>First working prototype demonstration and user feedback integration</p>
+                                    <a href="#" class="item-link">View Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-header">
+                            <i class="fas fa-comments"></i>
+                            <h3>Partner Communications</h3>
+                        </div>
+                        <div class="portfolio-items">
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Stakeholder Email Thread</h4>
+                                    <p>Complete communication history with Kibble Palace management</p>
+                                    <a href="#" class="item-link">View Thread</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Meeting Minutes</h4>
+                                    <p>Documented feedback sessions and requirement clarifications</p>
+                                    <a href="#" class="item-link">View Minutes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-category" data-aos="fade-up" data-aos-delay="400">
+                        <div class="category-header">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h3>Daily Team Briefs</h3>
+                        </div>
+                        <div class="portfolio-items">
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Sprint Planning Documents</h4>
+                                    <p>Daily standup notes and task allocation records</p>
+                                    <a href="#" class="item-link">View Documents</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Progress Tracking</h4>
+                                    <p>Team velocity metrics and milestone achievement logs</p>
+                                    <a href="#" class="item-link">View Tracking</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-category" data-aos="fade-up" data-aos-delay="600">
+                        <div class="category-header">
+                            <i class="fas fa-poll"></i>
+                            <h3>Research & Surveys</h3>
+                        </div>
+                        <div class="portfolio-items">
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Visitor Survey Results</h4>
+                                    <p>Public survey data on visitor preferences and technology comfort levels</p>
+                                    <a href="#" class="item-link">View Results</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item">
+                                <div class="item-thumbnail">
+                                    <i class="fas fa-microphone"></i>
+                                </div>
+                                <div class="item-details">
+                                    <h4>User Interviews</h4>
+                                    <p>Transcripts and insights from visitor interviews conducted on-site</p>
+                                    <a href="#" class="item-link">View Interviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -148,39 +468,69 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Project Reflection</h2>
-                <p class="section-subtitle">Insights gained, challenges overcome, and lessons learned</p>
+                <p class="section-subtitle">Partner interactions, learnings, and honest assessment of our work</p>
             </div>
-            <div class="reflection-grid">
-                <div class="reflection-card" data-aos="fade-up">
-                    <div class="card-icon">
-                        <i class="fas fa-lightbulb"></i>
+            
+            <!-- Partner Interactions -->
+            <div class="partner-interactions" data-aos="fade-up">
+                <h3>Interactions with Partners</h3>
+                <div class="interaction-content">
+                    <div class="interaction-text">
+                        <p>Our collaboration with Kibble Palace stakeholders was instrumental in shaping our solution. Through regular meetings and feedback sessions, we gained valuable insights into the operational realities of managing a heritage site.</p>
+                        
+                        <h4>Key Partnership Learnings:</h4>
+                        <ul>
+                            <li><strong>Heritage Constraints:</strong> Learned about strict limitations on structural modifications and the importance of preserving the building's historical integrity</li>
+                            <li><strong>Visitor Demographics:</strong> Discovered the diverse age range and technology comfort levels of typical visitors</li>
+                            <li><strong>Operational Needs:</strong> Understood staff workflows and the importance of real-time data for crowd management</li>
+                            <li><strong>Budget Realities:</strong> Gained appreciation for the financial constraints facing public institutions</li>
+                        </ul>
+                        
+                        <p>The stakeholders' emphasis on inclusivity and accessibility fundamentally changed our approach from a purely digital solution to our hybrid QR/Kiosk system. Their feedback was crucial in validating our design decisions and ensuring practical feasibility.</p>
                     </div>
-                    <h3>Key Insights</h3>
-                    <p>Discovered that 40% of visitors are elderly or families with young children who prefer physical interfaces over mobile apps. This led us to develop a dual-approach solution.</p>
-                </div>
-                <div class="reflection-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-icon">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <h3>Challenges Faced</h3>
-                    <p>Balancing modern technology with accessibility requirements. Ensuring data privacy compliance while maintaining seamless user experience across different age groups.</p>
-                </div>
-                <div class="reflection-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Evolution of Understanding</h3>
-                    <p>Initially focused solely on mobile solutions, but stakeholder feedback revealed the need for inclusive design. This shifted our approach to a hybrid system.</p>
-                </div>
-                <div class="reflection-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Stakeholder Learnings</h3>
-                    <p>Regular feedback sessions with Kibble Palace staff revealed operational constraints and visitor behavior patterns that significantly influenced our design decisions.</p>
                 </div>
             </div>
             
+            <!-- Pride and Challenges Essay -->
+            <div class="pride-essay" data-aos="fade-up" data-aos-delay="200">
+                <h3>What We're Proud Of (And What We're Not)</h3>
+                <div class="essay-content">
+                    <div class="pride-section">
+                        <h4><i class="fas fa-trophy"></i> What We're Proud Of</h4>
+                        <div class="pride-text">
+                            <p><strong>Inclusive Design Approach:</strong> We're particularly proud of how we prioritized accessibility from the beginning. Rather than creating a solution that only works for tech-savvy users, we designed a system that truly serves all visitor demographics. The dual QR/Kiosk approach ensures no one is excluded from participating.</p>
+                            
+                            <p><strong>Stakeholder-Centered Process:</strong> Our commitment to continuous stakeholder engagement resulted in a solution that addresses real operational needs rather than theoretical problems. We listened, adapted, and iterated based on genuine feedback.</p>
+                            
+                            <p><strong>Heritage Sensitivity:</strong> We successfully balanced modern technology needs with respect for the historical significance of Kibble Palace. Our non-invasive approach preserves the building's integrity while providing valuable functionality.</p>
+                            
+                            <p><strong>Team Collaboration:</strong> Despite diverse backgrounds and expertise areas, our team maintained excellent communication and shared ownership of the project outcomes. Each member contributed meaningfully to the final solution.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="challenges-section">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Areas for Improvement</h4>
+                        <div class="challenges-text">
+                            <p><strong>Technical Implementation Depth:</strong> While our prototypes effectively demonstrate the concept, we acknowledge that a production-ready system would require more robust backend infrastructure and security measures than we were able to fully develop within our timeframe.</p>
+                            
+                            <p><strong>User Testing Scale:</strong> Although we conducted user interviews and gathered feedback, we would have benefited from more extensive testing with actual Kibble Palace visitors to validate our assumptions about user behavior and preferences.</p>
+                            
+                            <p><strong>Data Analytics Sophistication:</strong> Our dashboard provides basic metrics, but we recognize that more advanced analytics capabilities (predictive modeling, trend analysis) would provide greater value to stakeholders.</p>
+                            
+                            <p><strong>Implementation Planning:</strong> While we focused heavily on design and user experience, we could have developed more detailed implementation timelines and change management strategies for actual deployment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-section">
+                        <h4><i class="fas fa-graduation-cap"></i> Key Learnings</h4>
+                        <div class="learning-text">
+                            <p>This project taught us that successful design isn't just about creating elegant solutions—it's about understanding constraints, respecting context, and prioritizing user needs over technological sophistication. The most innovative solution isn't always the most complex one.</p>
+                            
+                            <p>We learned the value of iterative design and the importance of remaining flexible as new information emerges. Our willingness to pivot from a mobile-only solution to a hybrid approach ultimately resulted in a much stronger final product.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -700,7 +1050,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Kibble Palace Visitor Tracking Solution. Student Project - University of Glasgow. <img src="assets/UoG_colour.png" alt="University of Glasgow" class="footer-uni-logo"></p>
+                <p>&copy; 2025 Kibble Palace Visitor Tracking Solution. Student Project - University of Glasgow. <img src="assets/UoG_logo.jpg" alt="University of Glasgow" class="footer-uni-logo"></p>
             </div>
         </div>
     </footer>
