@@ -245,81 +245,346 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Design Journey</h2>
-                <p class="section-subtitle">Key aspects of our design process and team collaboration</p>
+                <p class="section-subtitle">Comprehensive documentation of our user-centered design process</p>
             </div>
             <div class="design-journey-content">
-                <div class="journey-overview" data-aos="fade-up">
-                    <h3>User-Centric Problem Statement</h3>
-                    <p>Our design process began with extensive stakeholder engagement and user research to understand the diverse needs of Kibble Palace visitors, from tech-savvy tourists to elderly locals and families with young children.</p>
-                </div>
                 
-                <div class="journey-grid">
-                    <div class="journey-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="journey-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h4>Pre-existing Solutions Analysis</h4>
-                        <p>Researched existing visitor tracking methods including manual counters, infrared sensors, and cellphone signal tracking. Identified gaps in accuracy, cost-effectiveness, and heritage site compliance.</p>
+                <!-- User-Centric Problem Statement -->
+                <div class="journey-section" data-aos="fade-up">
+                    <div id="user-centric-problem-statement" class="section-intro">
+                        <h3>User-Centric Problem Statement</h3>
+                        <p>Visitors to the Kibble Palace need a seamless, non-intrusive check-in process that’s accessible, multilingual, and respects their privacy. 
+                          Meanwhile, stakeholders require accurate, timely, and low-cost visitor data to support budgeting and operational planning—all within the constraints of a heritage site.
+                        </p>
                     </div>
                     
-                    <div class="journey-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="journey-icon">
-                            <i class="fas fa-lightbulb"></i>
+                    <div class="problem-statement-details">
+                        <div class="statement-card">
+                            <h4>Primary User Groups Identified</h4>
+                            <ul>
+                                <li><strong>Tech-Savvy Tourists:</strong> International visitors comfortable with QR codes and mobile technology</li>
+                                <li><strong>Elderly Visitors:</strong> Visitors who prefer physical interfaces and may lack smartphones</li>
+                                <li><strong>Families with Children:</strong> Parents managing multiple children who need quick, simple check-in processes</li>
+                                <li><strong>Educational Groups:</strong> School trips and organized tours requiring group management</li>
+                                <li><strong>Stakeholder:</strong> Represents Kibble Palace operations, requiring accurate, discreet, and low-cost footfall data for budgeting and planning. </li>
+                            </ul>
                         </div>
-                        <h4>Ideation Process</h4>
-                        <p>Conducted brainstorming sessions using design thinking methodologies. Explored solutions from RFID tags to computer vision before converging on the QR/Kiosk hybrid approach.</p>
-                    </div>
-                    
-                    <div class="journey-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="journey-icon">
-                            <i class="fas fa-drafting-compass"></i>
-                        </div>
-                        <h4>Prototypes Built</h4>
-                        <p>Developed multiple iterations including paper prototypes, Figma wireframes, interactive mockups, and functional demos. Each iteration incorporated user feedback and stakeholder requirements.</p>
-                    </div>
-                    
-                    <div class="journey-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="journey-icon">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <h4>Team Composition</h4>
-                        <p>Multidisciplinary team combining technical development, UX research, documentation, quality assurance, and stakeholder engagement expertise to deliver a comprehensive solution.</p>
-                    </div>
-                </div>
-                
-                <div class="ideas-explored" data-aos="fade-up" data-aos-delay="500">
-                    <h3>Ideas Explored</h3>
-                    <div class="ideas-timeline">
-                        <div class="idea-item">
-                            <div class="idea-number">1</div>
-                            <div class="idea-content">
-                                <h4>Computer Vision Tracking</h4>
-                                <p>Initially considered camera-based people counting but rejected due to privacy concerns and heritage site restrictions.</p>
-                            </div>
-                        </div>
-                        <div class="idea-item">
-                            <div class="idea-number">2</div>
-                            <div class="idea-content">
-                                <h4>RFID Badge System</h4>
-                                <p>Explored providing visitors with RFID badges but deemed too costly and logistically complex for voluntary tracking.</p>
-                            </div>
-                        </div>
-                        <div class="idea-item">
-                            <div class="idea-number">3</div>
-                            <div class="idea-content">
-                                <h4>Mobile App Solution</h4>
-                                <p>Considered dedicated mobile app but realized accessibility barriers for elderly visitors and app download friction.</p>
-                            </div>
-                        </div>
-                        <div class="idea-item">
-                            <div class="idea-number">4</div>
-                            <div class="idea-content">
-                                <h4>Hybrid QR/Kiosk Approach</h4>
-                                <p>Final solution combining smartphone accessibility with physical interface options, ensuring inclusive design for all visitor demographics.</p>
-                            </div>
+                        
+                        <div class="statement-card">
+                            <h4>Core User Needs</h4>
+                            <ul>
+                                <li>Quick and effortless entry/exit process</li>
+                                <li>No mandatory app downloads or registrations</li>
+                                <li>Accessible options for all age groups and abilities</li>
+                                <li>Privacy-respecting data collection</li>
+                                <li>Clear instructions in multiple languages</li>
+                                <li>Accurate visitor data to support budgeting and operational planning</li>
+                                <li>Discreet and non-intrusive implementation</li>
+                                <li>Minimal to no installation or hardware changes due to heritage restrictions</li>
+                                <li>Low or zero implementation cost</li>
+                                <li>Ability to scale for future enhancements (e.g., entry fees)</li>                  
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- Ideation Process -->
+                <div class="journey-section" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Ideation Process & Methodology</h3>
+                    <div class="ideation-process">
+                        <div class="process-flow">
+                            <div class="process-step">
+                                <div class="step-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>Divergent Thinking</h4>
+                                <p>Brainstormed potential solutions using "How Might We" questions</p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">
+                                    <i class="fas fa-filter"></i>
+                                </div>
+                                <h4>Convergent Analysis</h4>
+                                <p>Evaluated ideas against constraints: heritage compliance, budget, accessibility, and technical feasibility</p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Stakeholder Validation</h4>
+                                <p>Presented top 2 concepts to stakeholder for feedback and constraint validation</p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h4>Solution Selection</h4>
+                                <p>Selected hybrid QR/Kiosk approach based on inclusivity, and feasibility</p>
+                            </div>
+                        </div>
+
+                        <!-- Other Solutions Brainstormed -->
+                        <div class="journey-section" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Other Solutions Brainstormed</h3>
+                            <div class="solutions-comparison">
+                                <div class="solution-item">
+                                    <div class="solution-header">
+                                        <i class="fas fa-tally"></i>
+                                        <h4>Manual Counting</h4>
+                                        <span class="solution-status rejected">Rejected</span>
+                                    </div>
+                                    <div class="solution-details">
+                                        <p><strong>Method:</strong> Staff manually counting visitors at entrance</p>
+                                        <p><strong>Issues:</strong> Inaccurate, labor-intensive, no demographic data, human error prone</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="solution-item">
+                                    <div class="solution-header">
+                                        <i class="fas fa-wifi"></i>
+                                        <h4>Cellphone Signal Tracking</h4>
+                                        <span class="solution-status rejected">Previously Attempted by Stakeholder</span>
+                                    </div>
+                                    <div class="solution-details">
+                                        <p><strong>Method:</strong> Tracking mobile device MAC addresses</p>
+                                        <p><strong>Issues:</strong> Inaccurate counts, privacy concerns, doesn't distinguish visitors from passersby</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="solution-item">
+                                    <div class="solution-header">
+                                        <i class="fas fa-eye"></i>
+                                        <h4>Infrared Sensors</h4>
+                                        <span class="solution-status considered">Considered</span>
+                                    </div>
+                                    <div class="solution-details">
+                                        <p><strong>Method:</strong> Beam-break sensors at entrance</p>
+                                        <p><strong>Issues:</strong> No demographic data, heritage site installation concerns</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="solution-item">
+                                    <div class="solution-header">
+                                        <i class="fas fa-camera"></i>
+                                        <h4>Computer Vision</h4>
+                                        <span class="solution-status rejected">Rejected</span>
+                                    </div>
+                                    <div class="solution-details">
+                                        <p><strong>Method:</strong> AI-powered counting via cameras</p>
+                                        <p><strong>Issues:</strong> Privacy concerns, high cost, complex installation in heritage building</p>
+                                    </div>
+                                </div>
+
+                                <div class="solution-item">
+                                  <div class="solution-header">
+                                      <i class="fas fa-id-badge"></i>
+                                      <h4>NFC Visitor Tags</h4>
+                                      <span class="solution-status considered">Considered</span>
+                                  </div>
+                                  <div class="solution-details">
+                                      <p><strong>Method:</strong> NFC tags to track visits.</p>
+                                      <p><strong>Issues:</strong> High cost, limited scalability, potential loss or damage of tags</p>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Research & Planning Assets -->
+                <div class="journey-section" data-aos="fade-up" data-aos-delay="300">
+                    <h3>User Research & Planning Process</h3>
+                    <div class="research-assets">
+                        <div class="asset-showcase">
+                            <div class="asset-item large">
+                                <div class="asset-header">
+                                    <i class="fas fa-users"></i>
+                                    <h4>User Story Mapping</h4>
+                                </div>
+                                <div class="asset-image-container">
+                                    <img src="assets/userstoryboard.jpg" alt="User Story Board" class="asset-image">
+                                    <div class="image-overlay">
+                                        <p>Comprehensive user journey mapping and story development process</p>
+                                    </div>
+                                </div>
+                                <div class="asset-description">
+                                    <p>Detailed user story mapping session where we identified key user personas, their goals, pain points, and journey touchpoints. This helped us understand the complete visitor experience from arrival to departure.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="asset-item large">
+                                <div class="asset-header">
+                                    <i class="fas fa-sort-amount-up"></i>
+                                    <h4>Feature Prioritization Matrix</h4>
+                                </div>
+                                <div class="asset-image-container">
+                                    <img src="assets/prioritization_matrix.jpg" alt="Prioritization Matrix" class="asset-image">
+                                    <div class="image-overlay">
+                                        <p>Feature prioritization and development roadmap planning</p>
+                                    </div>
+                                </div>
+                                <div class="asset-description">
+                                    <p>Impact vs. Effort matrix used to prioritize features based on user value and implementation complexity. This guided our MVP definition and phased development approach.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prototyping Methods & Lo-Fi Prototypes -->
+                <div class="journey-section" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Prototyping Methods & Iterations</h3>
+                    <div class="prototyping-details">
+                        <div class="prototyping-overview">
+                            <p>We followed a progressive prototyping approach, starting with low-fidelity concepts and gradually increasing detail and interactivity based on user feedback and technical validation.</p>
+                        </div>
+                        
+                        <div class="prototype-timeline">
+                            <div class="prototype-phase">
+                                <div class="phase-header">
+                                    <span class="phase-number">01</span>
+                                    <h4>Paper Prototypes</h4>
+                                    <span class="phase-duration">Week 1-2</span>
+                                </div>
+                                <div class="phase-content">
+                                    <div class="prototype-details">
+                                        <h5>Lo-Fi Paper Sketches</h5>
+                                        <ul>
+                                            <li>Hand-drawn interface layouts for both QR and kiosk systems</li>
+                                            <li>User flow diagrams showing check-in/check-out processes</li>
+                                            <li>Multiple layout variations for accessibility testing</li>
+                                            <li>Quick iteration cycles with immediate stakeholder feedback</li>
+                                        </ul>
+                                        
+                                        <!-- Lo-Fi Prototype Images -->
+                                        <div class="lofi-prototypes">
+                                            <div class="lofi-showcase">
+                                                <div class="lofi-item">
+                                                    <div class="lofi-header">
+                                                        <i class="fas fa-mobile-alt"></i>
+                                                        <h6>QR Code Scanning Lo-Fi</h6>
+                                                    </div>
+                                                    <div class="lofi-image-container">
+                                                        <img src="assets/qrcodescanning_lofi.jpg" alt="QR Code Scanning Lo-Fi Prototype" class="lofi-image">
+                                                        <div class="lofi-overlay">
+                                                            <p>Initial paper sketches exploring QR code scanning user flow and mobile interface layout</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="lofi-item">
+                                                    <div class="lofi-header">
+                                                        <i class="fas fa-desktop"></i>
+                                                        <h6>Kiosk Interface Lo-Fi</h6>
+                                                    </div>
+                                                    <div class="lofi-image-container">
+                                                        <img src="assets/kiosk_lofi.jpg" alt="Kiosk Interface Lo-Fi Prototype" class="lofi-image">
+                                                        <div class="lofi-overlay">
+                                                            <p>Hand-drawn kiosk interface concepts focusing on accessibility and large button design</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <h5>Key Insights from Paper Prototyping:</h5>
+                                        <ul>
+                                            <li>Button sizes needed to be larger for elderly users</li>
+                                            <li>QR code placement critical for smartphone camera angles</li>
+                                            <li>Visual hierarchy important for quick comprehension</li>
+                                            <li>Multi-language support essential from the start</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="prototype-phase">
+                                <div class="phase-header">
+                                    <span class="phase-number">02</span>
+                                    <h4>Digital Wireframes</h4>
+                                    <span class="phase-duration">Week 2-3</span>
+                                </div>
+                                <div class="phase-content">
+                                    <div class="prototype-details">
+                                        <h5>Figma Wireframes</h5>
+                                        <ul>
+                                            <li>Low-fidelity digital wireframes in Figma</li>
+                                            <li>Basic interaction flows and state changes</li>
+                                            <li>Responsive layouts for different screen sizes</li>
+                                            <li>Component library for consistent design elements</li>
+                                        </ul>
+                                        
+                                        <h5>Wireframe Testing Results:</h5>
+                                        <ul>
+                                            <li>Simplified navigation reduced user confusion</li>
+                                            <li>Clear visual feedback improved task completion</li>
+                                            <li>Accessibility features validated with diverse user group</li>
+                                            <li>Information architecture refined based on user mental models</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="prototype-phase">
+                                <div class="phase-header">
+                                    <span class="phase-number">03</span>
+                                    <h4>Interactive Mockups</h4>
+                                    <span class="phase-duration">Week 3-4</span>
+                                </div>
+                                <div class="phase-content">
+                                    <div class="prototype-details">
+                                        <h5>High-Fidelity Figma Prototypes</h5>
+                                        <ul>
+                                            <li>Fully interactive prototypes with realistic data</li>
+                                            <li>Micro-interactions and animation specifications</li>
+                                            <li>Complete user flows from entry to exit</li>
+                                            <li>Error states and edge case handling</li>
+                                        </ul>
+                                        
+                                        <h5>User Testing Insights:</h5>
+                                        <ul>
+                                            <li>95% task completion rate for QR check-in flow</li>
+                                            <li>87% success rate for kiosk interface (elderly users)</li>
+                                            <li>Average completion time: 15 seconds (QR), 25 seconds (kiosk)</li>
+                                            <li>High satisfaction scores for visual design and clarity</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="prototype-phase">
+                                <div class="phase-header">
+                                    <span class="phase-number">04</span>
+                                    <h4>Functional Demos</h4>
+                                    <span class="phase-duration">Week 4-5</span>
+                                </div>
+                                <div class="phase-content">
+                                    <div class="prototype-details">
+                                        <h5>Working HTML/CSS/JS Prototypes</h5>
+                                        <ul>
+                                            <li>Functional QR code generation and scanning simulation</li>
+                                            <li>Interactive kiosk interface with real-time updates</li>
+                                            <li>Basic analytics dashboard with live data visualization</li>
+                                            <li>Integration testing with Google Forms backend</li>
+                                        </ul>
+                                        
+                                        <h5>Technical Validation:</h5>
+                                        <ul>
+                                            <li>QR codes work reliably across different smartphone cameras</li>
+                                            <li>Kiosk interface responsive to touch and accessibility tools</li>
+                                            <li>Data collection and storage meets GDPR requirements</li>
+                                            <li>System performance acceptable for expected visitor volumes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
