@@ -51,6 +51,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Account for fixed navbar height */
 }
 
 .container {
@@ -146,6 +147,67 @@ html {
     background: var(--primary-color);
     margin: 3px 0;
     transition: var(--transition-fast);
+}
+
+/* Dropdown Navigation */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-dropdown .nav-link i {
+    font-size: 0.8rem;
+    transition: var(--transition-fast);
+}
+
+.nav-dropdown:hover .nav-link i {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-smooth);
+    z-index: 1001;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.nav-dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    border-left: 3px solid transparent;
+}
+
+.dropdown-link:hover {
+    background: linear-gradient(135deg, var(--glass-bg), rgba(255, 255, 255, 0.3));
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
 }
 
 /* Hero Section */
@@ -321,6 +383,11 @@ html {
 .section {
     padding: var(--section-padding);
     position: relative;
+    scroll-margin-top: 100px; /* Offset for fixed navbar */
+}
+
+.journey-section {
+    scroll-margin-top: 100px; /* Offset for fixed navbar */
 }
 
 .section-header {
