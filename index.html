@@ -404,10 +404,14 @@
                                     <i class="fas fa-users"></i>
                                     <h4>User Story Mapping</h4>
                                 </div>
-                                <div class="asset-image-container">
+                                <div class="asset-image-container" onclick="openModal('userstoryModal')">
                                     <img src="assets/userstoryboard.jpg" alt="User Story Board" class="asset-image">
                                     <div class="image-overlay">
                                         <p>Comprehensive user journey mapping and story development process</p>
+                                        <div class="click-to-expand">
+                                            <i class="fas fa-expand"></i>
+                                            <span>Click to expand</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="asset-description">
@@ -420,10 +424,14 @@
                                     <i class="fas fa-sort-amount-up"></i>
                                     <h4>Feature Prioritization Matrix</h4>
                                 </div>
-                                <div class="asset-image-container">
+                                <div class="asset-image-container" onclick="openModal('prioritizationModal')">
                                     <img src="assets/prioritization_matrix.jpg" alt="Prioritization Matrix" class="asset-image">
                                     <div class="image-overlay">
                                         <p>Feature prioritization and development roadmap planning</p>
+                                        <div class="click-to-expand">
+                                            <i class="fas fa-expand"></i>
+                                            <span>Click to expand</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="asset-description">
@@ -1319,6 +1327,129 @@
             </div>
         </div>
     </footer>
+
+    <!-- User Story Board Modal -->
+    <div id="userstoryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>User Story Board Flow</h2>
+                <span class="close" onclick="closeModal('userstoryModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="assets/userstoryboard.jpg" alt="User Story Board" class="modal-image">
+                </div>
+                <div class="story-flow-explanation">
+                    <h3>Our 6-Panel User Story Board</h3>
+                    <p class="storyboard-intro">You can see our complete visitor journey storyboard: user approaches, scans QR code, completes form, receives confirmation, enjoys the Palace, then checks out. Each panel represents a key moment in the user experience.</p>
+                    
+                    <div class="flow-steps">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>🚶‍♀️ Visitor Approaches</h4>
+                                <p><strong>What happens:</strong> A visitor arrives at Kibble Palace entrance and notices the tracking system</p>
+                                <p><strong>User goal:</strong> Enter the Palace and begin their visit</p>
+                                <p><strong>Design insight:</strong> The system must be immediately visible but non-intrusive to maintain the heritage site's atmosphere</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>📱 Scans QR Code</h4>
+                                <p><strong>What happens:</strong> Visitor uses their smartphone to scan the QR code at the entrance</p>
+                                <p><strong>User goal:</strong> Quick and easy check-in process</p>
+                                <p><strong>Design insight:</strong> QR code placement and size must accommodate users of all ages and tech comfort levels</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>📝 Completes Form</h4>
+                                <p><strong>What happens:</strong> Simple, optional form appears asking for basic demographic information</p>
+                                <p><strong>User goal:</strong> Provide helpful data while maintaining privacy</p>
+                                <p><strong>Design insight:</strong> Form must be minimal, mobile-friendly, and clearly explain data usage for GDPR compliance</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>✅ Receives Confirmation</h4>
+                                <p><strong>What happens:</strong> System confirms check-in and provides welcome message or useful information</p>
+                                <p><strong>User goal:</strong> Feel welcomed and informed about their visit</p>
+                                <p><strong>Design insight:</strong> Confirmation should add value (opening hours, highlights, facilities) rather than just acknowledge completion</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>🌿 Enjoys the Palace</h4>
+                                <p><strong>What happens:</strong> Visitor explores freely while system passively tracks visit duration and patterns</p>
+                                <p><strong>User goal:</strong> Immersive, uninterrupted experience in the beautiful greenhouse</p>
+                                <p><strong>Design insight:</strong> Tracking must be completely invisible during the visit - no notifications, prompts, or interruptions</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>👋 Checks Out</h4>
+                                <p><strong>What happens:</strong> Optional check-out process or automatic detection when leaving</p>
+                                <p><strong>User goal:</strong> Smooth exit with optional feedback opportunity</p>
+                                <p><strong>Design insight:</strong> Exit should be frictionless with optional survey for those who want to provide feedback</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prioritization Matrix Modal -->
+    <div id="prioritizationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Feature Prioritization Matrix</h2>
+                <span class="close" onclick="closeModal('prioritizationModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="assets/prioritization_matrix.jpg" alt="Prioritization Matrix" class="modal-image">
+                </div>
+                <div class="matrix-explanation">
+                    <h3>Our Feature Prioritization Strategy</h3>
+                    <p class="matrix-intro">This Impact vs Effort matrix helped us decide what to build first for our Kibble Palace visitor tracking prototype. We plotted each feature based on how much value it brings versus how difficult it is to implement.</p>
+                    
+                    <div class="matrix-quadrants">
+                        <div class="quadrant high-impact-low-effort">
+                            <h4>🎯 Quick Wins (High Impact, Low Effort)</h4>
+                            <p class="quadrant-description">These became our MVP features - maximum value with minimal development time.</p>
+                            <ul>
+                                <li><strong>📱 QR Code Check-in using Mobile Phone:</strong> Visitors love the simplicity, just scan and go!</li>
+                            </ul>
+                            <p><strong>💡 Why we prioritized this:</strong> Low cost, immediate deployment, and reliable data collection</p>
+                        </div>
+                        <div class="quadrant high-impact-high-effort">
+                            <h4>🚀 Future Roadmap (High Impact, High Effort)</h4>
+                            <p class="quadrant-description">These features will transform the experience but need significant investment.</p>
+                            <ul>
+                                <li><strong>📡 Bluetooth Beacon Tally Counter:</strong> Detects presence when visitors enter specific zones</li>
+                                <li><strong>📶 Passive WiFi Signal Sensing:</strong> Track number of visitors based on mobile device connections</li>
+                                <li><strong>🌡️ Heat Signature Counting with Thermal Cameras:</strong> Count the number of body signatures using thermal imaging cameras positioned discreetly</li>
+                            </ul>
+                        </div>
+                        <div class="quadrant low-impact-low-effort">
+                            <h4>🔧 Nice-to-Haves (Low Impact, Low Effort)</h4>
+                            <p class="quadrant-description">Easy additions that enhance the basic tracking systems.</p>
+                            <ul>
+                                <li><strong>👥 Volunteer "Human Sensor" Network:</strong> Train volunteers with handheld clicker/counter at peak times</li>
+                                <li><strong>🚪 Entrance Mat Pressure Sensors:</strong> Use wireless pressure-sensitive mats at doorways, battery powered, reasonable stability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
