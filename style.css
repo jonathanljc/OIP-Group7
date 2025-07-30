@@ -3591,6 +3591,35 @@ html {
     transform: scale(1.02);
 }
 
+.lofi-item {
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.lofi-item:hover {
+    transform: scale(1.02);
+}
+
+.lofi-overlay .click-to-expand {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.lofi-item:hover .lofi-overlay .click-to-expand {
+    opacity: 1;
+}
+
 /* Modal Styles */
 .modal {
     display: none;

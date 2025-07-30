@@ -470,7 +470,7 @@
                                         <!-- Lo-Fi Prototype Images -->
                                         <div class="lofi-prototypes">
                                             <div class="lofi-showcase">
-                                                <div class="lofi-item">
+                                                <div class="lofi-item" onclick="openModal('qrLofiModal')">
                                                     <div class="lofi-header">
                                                         <i class="fas fa-mobile-alt"></i>
                                                         <h6>QR Code Scanning Lo-Fi</h6>
@@ -479,11 +479,15 @@
                                                         <img src="assets/qrcodescanning_lofi.jpg" alt="QR Code Scanning Lo-Fi Prototype" class="lofi-image">
                                                         <div class="lofi-overlay">
                                                             <p>Initial paper sketches exploring QR code scanning user flow and mobile interface layout</p>
+                                                            <div class="click-to-expand">
+                                                                <i class="fas fa-expand"></i>
+                                                                <span>Click to expand</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 
-                                                <div class="lofi-item">
+                                                <div class="lofi-item" onclick="openModal('kioskLofiModal')">
                                                     <div class="lofi-header">
                                                         <i class="fas fa-desktop"></i>
                                                         <h6>Kiosk Interface Lo-Fi</h6>
@@ -492,6 +496,10 @@
                                                         <img src="assets/kiosk_lofi.jpg" alt="Kiosk Interface Lo-Fi Prototype" class="lofi-image">
                                                         <div class="lofi-overlay">
                                                             <p>Hand-drawn kiosk interface concepts focusing on accessibility and large button design</p>
+                                                            <div class="click-to-expand">
+                                                                <i class="fas fa-expand"></i>
+                                                                <span>Click to expand</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1444,6 +1452,180 @@
                                 <li><strong>👥 Volunteer "Human Sensor" Network:</strong> Train volunteers with handheld clicker/counter at peak times</li>
                                 <li><strong>🚪 Entrance Mat Pressure Sensors:</strong> Use wireless pressure-sensitive mats at doorways, battery powered, reasonable stability</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Lo-Fi Modal -->
+    <div id="qrLofiModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>QR Code Scanning Lo-Fi Prototype</h2>
+                <span class="close" onclick="closeModal('qrLofiModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="assets/qrcodescanning_lofi.jpg" alt="QR Code Scanning Lo-Fi Prototype" class="modal-image">
+                </div>
+                <div class="prototype-explanation">
+                    <h3>What Did We Learn from Our QR Code Prototype?</h3>
+                    <p class="prototype-intro">From our stakeholder conversations and low-fi storyboards, we learned that our original problem understanding was wrong - this isn't about visitor counting, it's about Palace's survival. This learning made us refine our requirements to focus on Council-grade data accuracy.</p>
+                    
+                    <div class="prototype-insights">
+                        <div class="insight-section">
+                            <h4>🔍 Key Discovery: User Motivation Challenge</h4>
+                            <p>From our digital wireframes and testing, we learned that <strong>user motivation was our biggest challenge</strong>. We discovered that successful data collection requires providing value back to visitors.</p>
+                        </div>
+                        
+                        <div class="insight-section">
+                            <h4>💡 Solution: AR Guide Feature</h4>
+                            <p>This insight led us to develop the <strong>AR guide feature</strong> - users don't just check in and leave data, they receive educational content about the Palace's unique plants and Victorian architecture.</p>
+                        </div>
+                        
+                        <div class="prototype-flow">
+                            <h4>📱 Complete Prototype Flow (6 Steps)</h4>
+                            <div class="flow-steps">
+                                <div class="flow-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>Scanning QR Code</h5>
+                                        <p>Welcome to Kibble Palace - scan the QR code below before exploring</p>
+                                    </div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5>Check-in Form</h5>
+                                        <p>Visitor check-in with visitor type, age range, number of people, and disability options</p>
+                                    </div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5>Check-in Confirmation</h5>
+                                        <p>Thank you for checking in! Enjoy your visit, but feel free to checkout when you leave.</p>
+                                    </div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h5>AR Guide Camera</h5>
+                                        <p>Point at flower or exhibit to get more info (scan virtually) - AR guide access to explore Kibble Palace with interactive info overlays</p>
+                                    </div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h5>AR Guide Info</h5>
+                                        <p>Flora information with description and scroller - educational content about specific structures and botanical features</p>
+                                    </div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="step-number">6</div>
+                                    <div class="step-content">
+                                        <h5>Check-out</h5>
+                                        <p>Leaving Kibble Palace - please check out to help us track visit durations (optional rating system)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-section">
+                            <h4>🎯 Value Exchange Model</h4>
+                            <p>This transforms data collection from a <strong>one-way extraction into a valuable exchange</strong> - visitors contribute demographics and footfall data while receiving enhanced educational experiences.</p>
+                        </div>
+                        
+                        <div class="insight-section">
+                            <h4>📚 Prototype Validation</h4>
+                            <p>This demonstrates exactly what lecture taught us: <strong>prototypes help validate concepts, identify issues, and reduce risk by revealing user needs we hadn't initially considered.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kiosk Lo-Fi Modal -->
+    <div id="kioskLofiModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Kiosk Interface Lo-Fi Prototype</h2>
+                <span class="close" onclick="closeModal('kioskLofiModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img src="assets/kiosk_lofi.jpg" alt="Kiosk Interface Lo-Fi Prototype" class="modal-image">
+                </div>
+                <div class="prototype-explanation">
+                    <h3>Accessibility-First Kiosk Design</h3>
+                    <p class="prototype-intro">Our kiosk prototype addresses the digital divide and accessibility concerns for visitors who may not have smartphones or prefer physical interaction points.</p>
+                    
+                    <div class="prototype-insights">
+                        <div class="kiosk-specs">
+                            <h4>📐 Physical Design Specifications</h4>
+                            <ul>
+                                <li><strong>Height:</strong> 115cm for wheelchair accessibility</li>
+                                <li><strong>Screen Size:</strong> 25cm for clear visibility</li>
+                                <li><strong>Base Width:</strong> 35cm for stability</li>
+                                <li><strong>Design:</strong> Freestanding and non-permanent to preserve heritage site integrity</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="kiosk-features">
+                            <h4>🎯 Key Features</h4>
+                            <ul>
+                                <li><strong>Large Touch Targets:</strong> Designed for users with mobility or dexterity challenges</li>
+                                <li><strong>Simple Navigation:</strong> Clear check-in/check-out flow</li>
+                                <li><strong>Accessible Height:</strong> Positioned for wheelchair users</li>
+                                <li><strong>Heritage Compliant:</strong> Non-invasive installation that respects the Victorian architecture</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="kiosk-flow">
+                            <h4>🖥️ Kiosk Interface Flow</h4>
+                            <div class="flow-steps">
+                                <div class="flow-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>Welcome Screen</h5>
+                                        <p>Welcome to Kibble Palace - Tap below to begin your visit (Check-in / Check-out options)</p>
+                                    </div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5>Check-in Form</h5>
+                                        <p>Large dropdown menus for visitor type, number of people, age range, and disability accommodations</p>
+                                    </div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5>Confirmation Screen</h5>
+                                        <p>Thank you! You've successfully checked in. Enjoy your visit with 6-digit check-out code for easy exit</p>
+                                    </div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h5>Check-out Process</h5>
+                                        <p>Visitor check-out with 6-digit code entry and optional rating system (emoji-based feedback)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-section">
+                            <h4>♿ Accessibility Considerations</h4>
+                            <p>The kiosk design ensures that <strong>all visitors can participate in data collection</strong>, regardless of their technology comfort level or physical abilities. This inclusive approach supports the Palace's mission to welcome diverse audiences.</p>
+                        </div>
+                        
+                        <div class="insight-section">
+                            <h4>🏛️ Heritage Site Integration</h4>
+                            <p>The freestanding design respects the <strong>protected status of the Victorian building</strong> while providing modern functionality. No permanent modifications are required, maintaining the architectural integrity.</p>
                         </div>
                     </div>
                 </div>
