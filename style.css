@@ -3133,6 +3133,43 @@ html {
     font-size: 1.1rem;
 }
 
+/* User Interview Section Styles */
+.user-interview-section {
+    margin: 2rem 0;
+}
+
+.interview-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+    align-items: start;
+}
+
+.interview-image-container {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.interview-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: var(--transition-smooth);
+}
+
+.interview-insights {
+    padding: 1rem 0;
+}
+
+.interview-insights h5 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
 /* Storyboard Section Styles */
 .storyboard-section {
     margin: 2rem 0;
@@ -3150,7 +3187,7 @@ html {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin: 2rem 0;
-    align-items: start;
+    align-items: center;
 }
 
 .storyboard-image-container {
@@ -3175,6 +3212,61 @@ html {
     font-family: var(--font-heading);
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
+}
+
+.storyboard-findings {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(244, 164, 96, 0.05);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-color);
+}
+
+.storyboard-findings h5 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.finding-content p {
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.finding-content strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.ar-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ar-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--glass-border);
+}
+
+.ar-feature i {
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.ar-feature span {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 /* Iterative Prototyping Styles */
@@ -5022,6 +5114,15 @@ html {
     vertical-align: middle;
     margin: 0 0.25rem;
     object-fit: contain;
+}
+
+/* Solution Method Icons */
+.method-icon {
+    color: white !important;
+}
+
+.method-icon i {
+    color: white !important;
 }
 
 /* Animations */
