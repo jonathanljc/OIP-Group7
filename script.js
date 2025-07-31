@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePrototypeTabs();
     initializeAnimations();
     initializeChart();
+    initializeAOS();
     
     // Add smooth scrolling for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -452,6 +453,101 @@ function initializeTimelineAnimations() {
 // Initialize timeline animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeTimelineAnimations);
 
+// Initialize AOS (Animate On Scroll) library
+function initializeAOS() {
+    console.log("Initializing AOS...");
+    
+    // Force visibility of design journey elements immediately
+    forceDesignJourneyVisibility();
+    
+    // If AOS library is available, initialize it
+    if (typeof AOS !== 'undefined') {
+        console.log("AOS library found, initializing...");
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    } else {
+        console.log("AOS library not found, using fallback...");
+        // Fallback: manually trigger animations for design journey elements
+        initializeDesignJourneyAnimations();
+    }
+}
+
+// Force design journey elements to be visible
+function forceDesignJourneyVisibility() {
+    console.log("Forcing design journey visibility...");
+    
+    const designJourneySection = document.getElementById('design-journey');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineContents = document.querySelectorAll('.timeline-content');
+    
+    console.log("Design journey section found:", !!designJourneySection);
+    console.log("Timeline items found:", timelineItems.length);
+    console.log("Timeline contents found:", timelineContents.length);
+    
+    // Force visibility of all timeline elements
+    timelineItems.forEach((item, index) => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+        item.style.visibility = 'visible';
+        item.style.display = 'flex';
+        console.log(`Timeline item ${index + 1} made visible`);
+    });
+    
+    timelineContents.forEach((content, index) => {
+        content.style.opacity = '1';
+        content.style.transform = 'translateY(0)';
+        content.style.visibility = 'visible';
+        content.style.display = 'block';
+        console.log(`Timeline content ${index + 1} made visible`);
+    });
+    
+    // Also check for the ideation section specifically
+    const ideationSection = document.querySelector('.timeline-item[data-aos-delay="200"]');
+    if (ideationSection) {
+        console.log("Ideation section found and made visible");
+        ideationSection.style.opacity = '1';
+        ideationSection.style.transform = 'translateY(0)';
+        ideationSection.style.visibility = 'visible';
+        ideationSection.style.display = 'flex';
+    } else {
+        console.log("Ideation section NOT found");
+    }
+}
+
+// Fallback animation system for design journey
+function initializeDesignJourneyAnimations() {
+    const designJourneyElements = document.querySelectorAll('[data-aos]');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('aos-animate');
+                // Add a small delay for staggered animations
+                const delay = entry.target.getAttribute('data-aos-delay') || 0;
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, delay);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    designJourneyElements.forEach(el => {
+        // Set initial state
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(el);
+    });
+}
+
 // Add floating animation to QR code
 function addFloatingAnimation() {
     const qrCode = document.getElementById('qr-code');
@@ -805,4 +901,30 @@ function showMetricDetails(metric) {
 document.addEventListener('DOMContentLoaded', function() {
     updateDashboardMetrics();
     initializeDashboardInteractions();
+});
+
+// Modal Functions for Solutions
+function openSolutionsModal() {
+    document.getElementById('solutionsModal').style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeSolutionsModal() {
+    document.getElementById('solutionsModal').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('solutionsModal');
+    if (event.target === modal) {
+        closeSolutionsModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeSolutionsModal();
+    }
 });
