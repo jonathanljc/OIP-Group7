@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="about-page-body">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -40,126 +40,173 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">About Us</h1>
-            <p class="page-subtitle">Meet the team behind the Kibble Palace visitor tracking solution</p>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section with Team Photo Background -->
+        <section class="team-hero">
+            <div class="hero-background-team">
+                <img src="../assets/teamphoto.jpg" alt="Kibble Palace Team Photo" class="hero-team-image">
+                <div class="hero-overlay-team"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content-team">
+                    <h1 class="hero-title-team">Meet Our Team</h1>
+                </div>
+            </div>
+        </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Meet Our Team</h2>
-                <p class="section-subtitle">The creative minds behind the Kibble Palace solution</p>
+        <!-- Team Members Section -->
+        <section class="team-showcase">
+            <div class="container">
+                <div class="section-intro">
+                    <h2 class="section-title">Our Expertise</h2>
+                    <p class="section-description">Each member brings unique skills and perspectives to deliver exceptional results</p>
+                </div>
+
+                <div class="team-grid-modern">
+                    <!-- Technical Leads -->
+                    <div class="team-member-modern featured" data-aos="fade-up">
+                        <div class="member-card">
+                            <div class="member-header">
+                                <img src="../assets/liangfan.jpg" alt="Lim Liang Fan" class="member-avatar">
+                                <div class="member-badge">Tech Lead</div>
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Lim Liang Fan</h3>
+                                <p class="member-title">Technical Lead / Developer</p>
+                                <p class="member-bio">Passionate about creating innovative solutions and leading technical development with expertise in modern web technologies.</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Frontend</span>
+                                    <span class="skill-tag">Backend</span>
+                                    <span class="skill-tag">Leadership</span>
+                                </div>
+                            </div>
+                            <div class="member-footer">
+                                <div class="social-links-modern">
+                                    <a href="https://github.com/liangfannn" target="_blank" class="social-link github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/liangfannn/" target="_blank" class="social-link linkedin">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member-modern featured" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-card">
+                            <div class="member-header">
+                                <img src="../assets/zhenxian.jpg" alt="Ho Zhen Xian" class="member-avatar">
+                                <div class="member-badge">Tech Lead</div>
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Ho Zhen Xian</h3>
+                                <p class="member-title">Technical Lead / Developer</p>
+                                <p class="member-bio">Dedicated to building robust systems and implementing cutting-edge technologies to solve complex challenges.</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Development</span>
+                                    <span class="skill-tag">Architecture</span>
+                                    <span class="skill-tag">Innovation</span>
+                                </div>
+                            </div>
+                            <div class="member-footer">
+                                <div class="social-links-modern">
+                                    <a href="https://github.com/zhenxian3" target="_blank" class="social-link github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/zhenxian/" target="_blank" class="social-link linkedin">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research & Documentation -->
+                    <div class="team-member-modern" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-card">
+                            <div class="member-header">
+                                <img src="../assets/jonathan.jpg" alt="Lim Jing Chuan Jonathan" class="member-avatar">
+                                <div class="member-badge research">Research</div>
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Lim Jing Chuan Jonathan</h3>
+                                <p class="member-title">Research Lead</p>
+                                <p class="member-bio">Drives user-centered research and insights to ensure our solutions meet real-world needs and expectations.</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">UX Research</span>
+                                    <span class="skill-tag">Analysis</span>
+                                    <span class="skill-tag">Strategy</span>
+                                </div>
+                            </div>
+                            <div class="member-footer">
+                                <div class="social-links-modern">
+                                    <a href="https://github.com/jonathanljc" target="_blank" class="social-link github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/ljcjonathan/" target="_blank" class="social-link linkedin">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member-modern" data-aos="fade-up" data-aos-delay="300">
+                        <div class="member-card">
+                            <div class="member-header">
+                                <img src="../assets/sean.jpg" alt="Sean Nicholas Tanu Sukumaran" class="member-avatar">
+                                <div class="member-badge documentation">Documentation</div>
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Sean Nicholas Tanu Sukumaran</h3>
+                                <p class="member-title">Documentation Lead</p>
+                                <p class="member-bio">Ensures clear communication and comprehensive documentation throughout the project lifecycle.</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Documentation</span>
+                                    <span class="skill-tag">Communication</span>
+                                    <span class="skill-tag">Process</span>
+                                </div>
+                            </div>
+                            <div class="member-footer">
+                                <div class="social-links-modern">
+                                    <a href="https://www.linkedin.com/in/seannich/" target="_blank" class="social-link linkedin">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member-modern" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member-card">
+                            <div class="member-header">
+                                <img src="../assets/darren.jpg" alt="Darren Tan Xi Pin" class="member-avatar">
+                                <div class="member-badge quality">Quality</div>
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Darren Tan Xi Pin</h3>
+                                <p class="member-title">Editor / QA</p>
+                                <p class="member-bio">Maintains high standards through meticulous quality assurance and editorial excellence.</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Quality Assurance</span>
+                                    <span class="skill-tag">Editing</span>
+                                    <span class="skill-tag">Standards</span>
+                                </div>
+                            </div>
+                            <div class="member-footer">
+                                <div class="social-links-modern">
+                                    <a href="https://www.linkedin.com/in/darrentxp/" target="_blank" class="social-link linkedin">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="team-grid">
-                <div class="team-member" data-aos="fade-up">
-                    <div class="member-photo">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Lim Liang Fan</h3>
-                        <p class="role">Technical Lead / Developer</p>
-                        <div class="social-links">
-                            <a href="https://github.com/liangfannn" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/liangfannn/" target="_blank" class="linkedin-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-photo">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Ho Zhen Xian</h3>
-                        <p class="role">Technical Lead / Developer</p>
-                        <div class="social-links">
-                            <a href="https://github.com/zhenxian3" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/zhenxian/" target="_blank" class="linkedin-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member-photo">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Sean Nicholas Tanu Sukumaran</h3>
-                        <p class="role">Documentation Lead</p>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/seannich/" target="_blank" class="linkedin-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-photo">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Darren Tan Xi Pin</h3>
-                        <p class="role">Editor / QA</p>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/darrentxp/" target="_blank" class="linkedin-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="400">
-                    <div class="member-photo">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Lim Jing Chuan Jonathan</h3>
-                        <p class="role">Research Lead</p>
-                        <div class="social-links">
-                            <a href="https://github.com/jonathanljc" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/ljcjonathan/" target="_blank" class="linkedin-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
