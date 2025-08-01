@@ -30,7 +30,7 @@
                 <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
                 <li><a href="reflection.html" class="nav-link active">Reflection</a></li>
                 <li><a href="prototype.html" class="nav-link">Prototype</a></li>
-                <li><a href="about.html" class="nav-link active">About Us</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -48,76 +48,227 @@
         </div>
     </section>
 
-    <!-- Reflection Section -->
-    <section id="reflection" class="section reflection-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Project Reflection</h2>
-                <p class="section-subtitle">Partner interactions, learnings, and honest assessment of our work</p>
-            </div>
-            
-            <!-- Partner Interactions -->
-            <div class="partner-interactions" data-aos="fade-up">
-                <h3>Interactions with Partners</h3>
-                <div class="interaction-content">
-                    <div class="interaction-text">
-                        <p>Our collaboration with Kibble Palace stakeholders was instrumental in shaping our solution. Through regular meetings and feedback sessions, we gained valuable insights into the operational realities of managing a heritage site.</p>
-                        
-                        <h4>Key Partnership Learnings:</h4>
-                        <ul>
-                            <li><strong>Heritage Constraints:</strong> Learned about strict limitations on structural modifications and the importance of preserving the building's historical integrity</li>
-                            <li><strong>Visitor Demographics:</strong> Discovered the diverse age range and technology comfort levels of typical visitors</li>
-                            <li><strong>Operational Needs:</strong> Understood staff workflows and the importance of real-time data for crowd management</li>
-                            <li><strong>Budget Realities:</strong> Gained appreciation for the financial constraints facing public institutions</li>
-                        </ul>
-                        
-                        <p>The stakeholders' emphasis on inclusivity and accessibility fundamentally changed our approach from a purely digital solution to our hybrid QR/Kiosk system. Their feedback was crucial in validating our design decisions and ensuring practical feasibility.</p>
+    <!-- Reflection Summary Grid -->
+    <section class="reflection-summary-section">
+        <div class="reflection-grid">
+            <!-- Partner Interactions Summary -->
+            <article class="reflection-summary partner-summary" data-aos="fade-up">
+                <header class="summary-header">
+                    <div class="summary-number">01</div>
+                    <div class="summary-meta">
+                        <span class="summary-category">Partnership Reflection</span>
+                        <h2>Partner Interactions</h2>
+                        <p>Collaboration with Friends of Glasgow</p>
                     </div>
+                </header>
+                
+                <div class="summary-content">
+                    <p class="summary-lead">
+                        Our partnership with Friends of Glasgow evolved from standard stakeholder engagement into genuine collaboration that fundamentally shaped our understanding of heritage site management and influenced every aspect of our solution design.
+                    </p>
+                    
+                    <div class="key-insights">
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="insight-text">
+                                <h4>Accessibility Revelation</h4>
+                                <p>Stakeholder emphasis on serving all visitor demographics led to our hybrid QR/Kiosk approach</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="insight-text">
+                                <h4>Collaborative Process</h4>
+                                <p>Direct, constructive feedback helped us balance innovation with operational realities</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="insight-text">
+                                <h4>Design Impact</h4>
+                                <p>Partnership influenced our methodology toward iterative, stakeholder-centered design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="read-more-btn" onclick="openPartnerModal()">
+                        <span>Read Full Reflection</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
-            </div>
-            
-            <!-- Pride and Challenges Essay -->
-            <div class="pride-essay" data-aos="fade-up" data-aos-delay="200">
-                <h3>What We're Proud Of (And What We're Not)</h3>
-                <div class="essay-content">
-                    <div class="pride-section">
-                        <h4><i class="fas fa-trophy"></i> What We're Proud Of</h4>
-                        <div class="pride-text">
-                            <p><strong>Inclusive Design Approach:</strong> We're particularly proud of how we prioritized accessibility from the beginning. Rather than creating a solution that only works for tech-savvy users, we designed a system that truly serves all visitor demographics. The dual QR/Kiosk approach ensures no one is excluded from participating.</p>
-                            
-                            <p><strong>Stakeholder-Centered Process:</strong> Our commitment to continuous stakeholder engagement resulted in a solution that addresses real operational needs rather than theoretical problems. We listened, adapted, and iterated based on genuine feedback.</p>
-                            
-                            <p><strong>Heritage Sensitivity:</strong> We successfully balanced modern technology needs with respect for the historical significance of Kibble Palace. Our non-invasive approach preserves the building's integrity while providing valuable functionality.</p>
-                            
-                            <p><strong>Team Collaboration:</strong> Despite diverse backgrounds and expertise areas, our team maintained excellent communication and shared ownership of the project outcomes. Each member contributed meaningfully to the final solution.</p>
+            </article>
+
+            <!-- Work Assessment Summary -->
+            <article class="reflection-summary assessment-summary" data-aos="fade-up" data-aos-delay="200">
+                <header class="summary-header">
+                    <div class="summary-number">02</div>
+                    <div class="summary-meta">
+                        <span class="summary-category">Critical Assessment</span>
+                        <h2>Work Evaluation</h2>
+                        <p>Honest assessment of achievements and growth areas</p>
+                    </div>
+                </header>
+                
+                <div class="summary-content">
+                    <p class="summary-lead">
+                        Reflecting on our work reveals a complex mix of pride and humility. While we achieved core objectives and created a stakeholder-focused solution, the process revealed areas where our approach could have been more sophisticated.
+                    </p>
+                    
+                    <div class="assessment-grid">
+                        <div class="assessment-column proud">
+                            <h4><i class="fas fa-trophy"></i> Proud Of</h4>
+                            <ul>
+                                <li>Inclusive design philosophy</li>
+                                <li>Stakeholder-centered process</li>
+                                <li>Heritage sensitivity</li>
+                                <li>Team collaboration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="assessment-column improve">
+                            <h4><i class="fas fa-arrow-up"></i> Areas to Improve</h4>
+                            <ul>
+                                <li>Technical implementation depth</li>
+                                <li>User testing scale</li>
+                                <li>Analytics sophistication</li>
+                                <li>Implementation planning</li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <div class="challenges-section">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Areas for Improvement</h4>
-                        <div class="challenges-text">
-                            <p><strong>Technical Implementation Depth:</strong> While our prototypes effectively demonstrate the concept, we acknowledge that a production-ready system would require more robust backend infrastructure and security measures than we were able to fully develop within our timeframe.</p>
-                            
-                            <p><strong>User Testing Scale:</strong> Although we conducted user interviews and gathered feedback, we would have benefited from more extensive testing with actual Kibble Palace visitors to validate our assumptions about user behavior and preferences.</p>
-                            
-                            <p><strong>Data Analytics Sophistication:</strong> Our dashboard provides basic metrics, but we recognize that more advanced analytics capabilities (predictive modeling, trend analysis) would provide greater value to stakeholders.</p>
-                            
-                            <p><strong>Implementation Planning:</strong> While we focused heavily on design and user experience, we could have developed more detailed implementation timelines and change management strategies for actual deployment.</p>
+                    <div class="key-learning">
+                        <div class="learning-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                    </div>
-                    
-                    <div class="learning-section">
-                        <h4><i class="fas fa-graduation-cap"></i> Key Learnings</h4>
                         <div class="learning-text">
-                            <p>This project taught us that successful design isn't just about creating elegant solutions—it's about understanding constraints, respecting context, and prioritizing user needs over technological sophistication. The most innovative solution isn't always the most complex one.</p>
-                            
-                            <p>We learned the value of iterative design and the importance of remaining flexible as new information emerges. Our willingness to pivot from a mobile-only solution to a hybrid approach ultimately resulted in a much stronger final product.</p>
+                            <h4>Key Learning</h4>
+                            <p>Successful design emerges from the intersection of user needs, technical feasibility, and contextual constraints—not from pushing any single boundary.</p>
                         </div>
                     </div>
+                    
+                    <button class="read-more-btn" onclick="openAssessmentModal()">
+                        <span>Read Full Assessment</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
+
+    <!-- Partner Interactions Modal -->
+    <div id="partnerModal" class="reflection-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-handshake"></i> Partner Interactions - Full Reflection</h2>
+                <span class="close" onclick="closePartnerModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="modal-lead">Our partnership with Friends of Glasgow proved to be one of the most valuable and transformative aspects of this project. What began as a standard stakeholder relationship evolved into a genuine collaboration that fundamentally shaped our understanding of heritage site management and influenced every aspect of our solution design.</p>
+                
+                <h3>Initial Engagement and Expectations</h3>
+                <p>From our first meeting, it became clear that Friends of Glasgow brought a wealth of practical experience and institutional knowledge that we, as students, could never have anticipated. Their initial briefing revealed the complexity of managing a heritage site like Kibble Palace—balancing preservation requirements with visitor accessibility, managing limited resources while maintaining high standards, and navigating the bureaucratic challenges of public institution management.</p>
+                
+                <p>What struck us most was their genuine enthusiasm for innovation coupled with a healthy skepticism about technology for technology's sake. They had seen numerous well-intentioned proposals that failed to account for operational realities, and their questions pushed us to think beyond the theoretical into the practical implications of our designs.</p>
+                
+                <h3>The Evolution of Understanding</h3>
+                <p>Through regular feedback sessions and site visits, our understanding of the problem space deepened considerably. The stakeholders' emphasis on inclusivity and accessibility fundamentally changed our approach from a purely digital solution to our hybrid QR/Kiosk system. This wasn't just a design pivot—it was a philosophical shift toward recognizing that good design must serve all users, not just the technologically comfortable.</p>
+                
+                <p>The heritage preservation constraints initially felt limiting, but our partners helped us reframe these as creative challenges. Their stories about previous unsuccessful technology implementations taught us that the most elegant solution isn't always the most appropriate one. Sometimes the best innovation lies in working within constraints rather than trying to overcome them.</p>
+                
+                <h3>Communication and Collaboration Dynamics</h3>
+                <p>The communication style with Friends of Glasgow was refreshingly direct and constructive. They provided honest feedback about our proposals, pointing out potential operational challenges we hadn't considered. This wasn't discouraging—it was invaluable. Their willingness to share both successes and failures from previous projects gave us insights that no amount of academic research could provide.</p>
+                
+                <p>We learned to present our ideas not just as technical solutions, but as responses to their specific operational needs. This shift in communication approach improved not only our external presentations but also our internal design discussions. We began evaluating every feature against real-world constraints and user needs rather than theoretical possibilities.</p>
+                
+                <h3>Impact on Our Design Process</h3>
+                <p>The partnership influenced our methodology in profound ways. Their feedback led us to adopt a more iterative approach, testing assumptions early and often rather than developing elaborate solutions in isolation. The stakeholders' questions about implementation, maintenance, and staff training forced us to consider the entire lifecycle of our solution, not just its initial deployment.</p>
+                
+                <p>Perhaps most importantly, they helped us understand that successful technology implementation in heritage settings requires more than just technical excellence—it requires cultural sensitivity, operational awareness, and genuine respect for the institution's mission and values.</p>
+                
+                <h3>Challenges and Learning Moments</h3>
+                <p>Not every interaction was smooth. There were moments when our enthusiasm for innovative features clashed with their practical concerns about budget and maintenance. These tensions, however, proved educational. They taught us to balance ambition with pragmatism and to present solutions that were both innovative and implementable.</p>
+                
+                <p>The most significant learning moment came when we realized that our initial mobile-only approach, while technically sophisticated, would exclude a significant portion of Kibble Palace's visitor demographic. This feedback was initially disappointing but ultimately led to our strongest design decision—the hybrid approach that serves all users effectively.</p>
+                
+                <h3>Long-term Value of the Partnership</h3>
+                <p>Beyond the immediate project benefits, this partnership provided us with a model for future stakeholder engagement. We learned that the best collaborations happen when both parties bring their expertise to the table—we contributed technical knowledge and fresh perspectives, while they provided operational wisdom and institutional context.</p>
+                
+                <p>The relationship also reinforced the importance of designing with rather than for users. Friends of Glasgow weren't just clients to satisfy; they were partners in creating a solution that would genuinely improve their operations and visitor experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Assessment Modal -->
+    <div id="assessmentModal" class="reflection-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-balance-scale"></i> Work Assessment - Full Evaluation</h2>
+                <span class="close" onclick="closeAssessmentModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="modal-lead">Reflecting on our work for the Kibble Palace visitor tracking project, I find myself experiencing a complex mix of pride and humility. While we achieved our core objectives and created a solution that addresses real stakeholder needs, the process also revealed areas where our approach could have been more sophisticated and our execution more thorough.</p>
+                
+                <h3>What We Are Proud Of</h3>
+                
+                <h4>Inclusive Design Philosophy</h4>
+                <p>I am particularly proud of our commitment to inclusive design from the project's inception. The decision to develop a hybrid QR/Kiosk system wasn't just a technical choice—it was a philosophical statement about who deserves access to digital services. Too often, technology projects assume universal comfort with smartphones and digital interfaces. Our solution acknowledges that meaningful innovation must serve diverse user groups with varying technological capabilities.</p>
+                
+                <p>This inclusive approach extended beyond just providing multiple interaction methods. We considered cognitive load, physical accessibility, and varying levels of digital literacy in our interface designs. The large, clear buttons on our kiosk interface and the simple, intuitive QR code process reflect our understanding that good design should feel effortless for all users.</p>
+                
+                <h4>Stakeholder-Centered Process</h4>
+                <p>Our approach to stakeholder engagement represents another significant strength. Rather than treating Friends of Glasgow as passive recipients of our solution, we positioned them as active collaborators in the design process. This wasn't just good practice—it was essential for creating a solution that would actually work in their operational context.</p>
+                
+                <p>The iterative feedback loops we established ensured that our solution evolved in response to real needs rather than theoretical assumptions. Every major design decision was validated against operational requirements and user feedback, resulting in a more grounded and practical final product.</p>
+                
+                <h4>Heritage Sensitivity</h4>
+                <p>Successfully balancing modern technology with respect for Kibble Palace's historical significance required careful consideration and creative problem-solving. I'm proud that we found ways to implement visitor tracking without compromising the site's aesthetic integrity or requiring structural modifications that could damage the heritage fabric.</p>
+                
+                <p>Our non-invasive approach—using portable kiosks and discrete QR code placements—demonstrates that innovation doesn't require disruption. Sometimes the most sophisticated solution is the one that integrates seamlessly with existing conditions.</p>
+                
+                <h4>Team Collaboration and Communication</h4>
+                <p>Despite our diverse backgrounds and varying levels of experience with different aspects of the project, we maintained excellent communication and shared ownership throughout the process. Our daily briefs and regular check-ins ensured that everyone remained aligned on objectives and progress, while our collaborative decision-making process meant that the final solution truly represents our collective expertise.</p>
+                
+                <h3>What We Are Not Proud Of</h3>
+                
+                <h4>Technical Implementation Depth</h4>
+                <p>While our prototypes effectively demonstrate the concept and user experience, I recognize that our technical implementation lacks the depth and robustness required for production deployment. Our backend architecture, while functional for demonstration purposes, would need significant enhancement to handle real-world security requirements, data privacy regulations, and scalability demands.</p>
+                
+                <p>We focused heavily on the user-facing aspects of the solution—which was appropriate for our project scope—but this meant that critical backend considerations like data encryption, user authentication, and system monitoring received less attention than they would require in a real implementation.</p>
+                
+                <h4>Limited User Testing Scale</h4>
+                <p>Our user testing, while valuable, was limited in scope and scale. Testing primarily with fellow students and a small number of external participants provided useful feedback, but it couldn't fully validate our assumptions about how actual Kibble Palace visitors would interact with the system.</p>
+                
+                <p>A more comprehensive testing approach would have included longer-term usability studies, testing with a broader demographic range, and evaluation of the system's performance under realistic usage conditions. The constraints of our project timeline made this challenging, but I recognize that more extensive testing would have strengthened our solution significantly.</p>
+                
+                <h4>Data Analytics Sophistication</h4>
+                <p>While our solution captures basic visitor tracking data, the analytics capabilities we developed are relatively simple compared to what would provide maximum value to stakeholders. Advanced features like predictive modeling for crowd management, detailed visitor journey analysis, and integration with other operational systems would significantly enhance the solution's utility.</p>
+                
+                <p>Our focus on core functionality meant that these more sophisticated analytical capabilities remained conceptual rather than implemented. In a real-world deployment, these advanced features would likely provide the greatest long-term value to site managers.</p>
+                
+                <h4>Implementation and Change Management Planning</h4>
+                <p>Perhaps our most significant oversight was the limited attention we paid to implementation planning and change management. While we created a functional solution, we didn't adequately address how it would be deployed, how staff would be trained, or how the transition from current practices would be managed.</p>
+                
+                <p>Real-world technology implementation requires careful planning for staff training, system integration, maintenance procedures, and contingency planning. Our focus on the solution itself meant that these crucial implementation considerations received insufficient attention.</p>
+                
+                <h3>Lessons Learned and Future Applications</h3>
+                <p>This project taught us that successful design isn't just about creating elegant solutions—it's about understanding constraints, respecting context, and prioritizing user needs over technological sophistication. The most innovative solution isn't always the most appropriate one.</p>
+                
+                <p>We learned the value of iterative design and remaining flexible as new information emerges. Our willingness to pivot from a mobile-only solution to a hybrid approach resulted in a much stronger final product. This experience reinforced that good design requires both creative vision and practical wisdom.</p>
+                
+                <p>Perhaps most importantly, we discovered that the best solutions often emerge from the intersection of user needs, technical feasibility, and contextual constraints—not from pushing the boundaries of any single dimension. This holistic approach to problem-solving will inform our future work and help us create solutions that are both innovative and implementable.</p>
+                
+                <p>While there are aspects of our work that could have been stronger, I believe we created a solution that genuinely addresses stakeholder needs while respecting the unique constraints of heritage site management. The project provided valuable learning experiences that will inform our future practice and demonstrated our ability to collaborate effectively on complex, real-world challenges.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -135,6 +286,48 @@
             duration: 1000,
             once: true,
             offset: 100
+        });
+
+        // Modal Functions
+        function openPartnerModal() {
+            document.getElementById('partnerModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePartnerModal() {
+            document.getElementById('partnerModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openAssessmentModal() {
+            document.getElementById('assessmentModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAssessmentModal() {
+            document.getElementById('assessmentModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const partnerModal = document.getElementById('partnerModal');
+            const assessmentModal = document.getElementById('assessmentModal');
+            
+            if (event.target == partnerModal) {
+                closePartnerModal();
+            }
+            if (event.target == assessmentModal) {
+                closeAssessmentModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closePartnerModal();
+                closeAssessmentModal();
+            }
         });
     </script>
 </body>

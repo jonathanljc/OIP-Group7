@@ -51,37 +51,7 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="section portfolio-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Portfolio of Work</h2>
-                <p class="section-subtitle">Our portfolio of work, e.g. weekly pitch videos, communications with our partner, daily team briefs, external surveys, additional interviews conducted with the public, etc.</p>
-            </div>
             <div class="portfolio-content">
-                <!-- Portfolio Hero Banner -->
-                <div class="portfolio-hero" data-aos="fade-up">
-                    <div class="hero-content">
-                        <div class="hero-badge">
-                            <i class="fas fa-folder-open"></i>
-                            <span>Project Documentation</span>
-                        </div>
-                        <h3>Complete Portfolio of Work</h3>
-                        <p>Comprehensive documentation including weekly pitch videos, partner communications, team briefs, surveys, and public interviews</p>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Videos</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Documents</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Weeks</div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Video Gallery -->
                 <div class="video-gallery" data-aos="fade-up" data-aos-delay="200">
                     <div class="gallery-header">
@@ -162,11 +132,6 @@
                                 <h5>Partner Communications</h5>
                                 <div class="card-items">
                                     <div class="item-row">
-                                        <i class="fas fa-envelope"></i>
-                                        <span>Email Correspondence</span>
-                                        <a href="#" class="item-action">View</a>
-                                    </div>
-                                    <div class="item-row">
                                         <i class="fas fa-calendar"></i>
                                         <span>Meeting Minutes</span>
                                         <a href="#" class="item-action">View</a>
@@ -190,17 +155,7 @@
                                     <div class="item-row">
                                         <i class="fas fa-clipboard-list"></i>
                                         <span>Daily Briefs</span>
-                                        <a href="#" class="item-action">View</a>
-                                    </div>
-                                    <div class="item-row">
-                                        <i class="fas fa-tasks"></i>
-                                        <span>Sprint Planning</span>
-                                        <a href="#" class="item-action">View</a>
-                                    </div>
-                                    <div class="item-row">
-                                        <i class="fas fa-chart-line"></i>
-                                        <span>Progress Reports</span>
-                                        <a href="#" class="item-action">View</a>
+                                        <a href="#" class="item-action" onclick="openDailyBriefsModal()">View</a>
                                     </div>
                                 </div>
                             </div>
@@ -218,16 +173,6 @@
                                         <span>Visitor Surveys</span>
                                         <a href="#" class="item-action">View</a>
                                     </div>
-                                    <div class="item-row">
-                                        <i class="fas fa-microphone"></i>
-                                        <span>Public Interviews</span>
-                                        <a href="#" class="item-action">View</a>
-                                    </div>
-                                    <div class="item-row">
-                                        <i class="fas fa-chart-bar"></i>
-                                        <span>Data Analysis</span>
-                                        <a href="#" class="item-action">View</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -236,6 +181,250 @@
             </div>
         </div>
     </section>
+
+    <!-- Daily Briefs Modal -->
+    <div id="dailyBriefsModal" class="modal">
+        <div class="modal-content daily-briefs-modal">
+            <div class="modal-header">
+                <h2><i class="fas fa-clipboard-list"></i> Daily Team Briefs & Reflections</h2>
+                <span class="close" onclick="closeDailyBriefsModal()">&times;</span>
+            </div>
+            
+            <div class="modal-body">
+                <div class="briefs-timeline">
+                    <!-- Day 1 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="brief-date">
+                            <div class="date-badge research">Day 1</div>
+                            <div class="phase-label">Research & Discovery</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>Project Kickoff & Initial Research</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Project initialization, stakeholder mapping, and preliminary research planning.</p>
+                                <ul>
+                                    <li>Established project scope and objectives</li>
+                                    <li>Identified key stakeholders and user groups</li>
+                                    <li>Planned user interview strategy</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>Strong start with clear project vision. The stakeholder diversity presents both opportunities and challenges for user research.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="brief-date">
+                            <div class="date-badge research">Day 2</div>
+                            <div class="phase-label">Research & Discovery</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>User Interviews & Requirements Gathering</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Conducting user interviews and gathering functional requirements.</p>
+                                <ul>
+                                    <li>Completed 5 user interviews with diverse visitor groups</li>
+                                    <li>Documented key user needs and pain points</li>
+                                    <li>Identified technical constraints and heritage site requirements</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>User interviews revealed surprising openness to digital solutions. Heritage preservation requirements will be crucial to balance with modern technology.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="brief-date">
+                            <div class="date-badge ideation">Day 3</div>
+                            <div class="phase-label">Ideation & Selection</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>Solution Brainstorming & Initial Concepts</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Generating creative solutions and exploring technology options.</p>
+                                <ul>
+                                    <li>Brainstormed 15+ potential solutions</li>
+                                    <li>Researched QR code and kiosk technologies</li>
+                                    <li>Evaluated feasibility and user experience impact</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>The hybrid QR/Kiosk approach is emerging as the most promising. Need to validate technical feasibility and user acceptance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 4 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="brief-date">
+                            <div class="date-badge ideation">Day 4</div>
+                            <div class="phase-label">Ideation & Selection</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>Solution Evaluation & Prioritization</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Systematic evaluation using prioritization matrix methodology.</p>
+                                <ul>
+                                    <li>Created value vs complexity prioritization matrix</li>
+                                    <li>Evaluated 6 top solutions against key criteria</li>
+                                    <li>Selected hybrid QR/Kiosk solution for development</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>The matrix methodology provided clear decision-making framework. Confident in our solution choice balancing innovation with practicality.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 5 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="brief-date">
+                            <div class="date-badge ideation">Day 5</div>
+                            <div class="phase-label">Ideation & Selection</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>Storyboarding & User Journey Mapping</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Visualizing user interactions and system workflows.</p>
+                                <ul>
+                                    <li>Created detailed user journey storyboards</li>
+                                    <li>Mapped QR code scanning and kiosk interaction flows</li>
+                                    <li>Identified key touchpoints and potential friction areas</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>Storyboarding revealed the importance of clear signage and intuitive user guidance. The dual-option approach provides good flexibility.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 6 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="brief-date">
+                            <div class="date-badge ideation">Day 6</div>
+                            <div class="phase-label">Ideation & Selection</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>Technical Architecture & System Design</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Defining technical requirements and system architecture.</p>
+                                <ul>
+                                    <li>Designed data flow and system architecture</li>
+                                    <li>Specified QR code generation and tracking mechanisms</li>
+                                    <li>Planned kiosk hardware and software requirements</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>Technical planning phase highlighted the need for robust data privacy measures and offline capability considerations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 7 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="700">
+                        <div class="brief-date">
+                            <div class="date-badge prototype">Day 7</div>
+                            <div class="phase-label">Prototyping & Testing</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>Low-Fidelity Prototyping</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Creating initial paper prototypes and wireframes.</p>
+                                <ul>
+                                    <li>Developed paper prototypes for QR and kiosk interfaces</li>
+                                    <li>Created basic wireframes for mobile and kiosk screens</li>
+                                    <li>Conducted initial usability testing with team members</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>Paper prototyping revealed several usability issues early. The iterative approach is proving valuable for rapid refinement.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 8 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="800">
+                        <div class="brief-date">
+                            <div class="date-badge prototype">Day 8</div>
+                            <div class="phase-label">Prototyping & Testing</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>Digital Prototype Development</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Building interactive digital prototypes using Figma.</p>
+                                <ul>
+                                    <li>Created high-fidelity Figma prototypes</li>
+                                    <li>Implemented interactive QR scanning simulation</li>
+                                    <li>Designed kiosk interface with touch interactions</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>Digital prototyping allowed for more realistic user testing. The visual design is coming together well with the heritage site aesthetic.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 9 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="900">
+                        <div class="brief-date">
+                            <div class="date-badge prototype">Day 9</div>
+                            <div class="phase-label">Prototyping & Testing</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>User Testing & Feedback Integration</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Conducting user testing sessions and gathering feedback.</p>
+                                <ul>
+                                    <li>Tested prototypes with 8 potential users</li>
+                                    <li>Collected detailed usability feedback</li>
+                                    <li>Identified areas for improvement and refinement</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>User testing validated our core concept while revealing important accessibility considerations. The feedback will guide final refinements.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 10 -->
+                    <div class="brief-item" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="brief-date">
+                            <div class="date-badge prototype">Day 10</div>
+                            <div class="phase-label">Prototyping & Testing</div>
+                        </div>
+                        <div class="brief-content">
+                            <h4>Final Prototype & Project Completion</h4>
+                            <div class="brief-summary">
+                                <p><strong>Today's Focus:</strong> Finalizing prototypes and preparing project deliverables.</p>
+                                <ul>
+                                    <li>Implemented final design refinements</li>
+                                    <li>Created comprehensive project documentation</li>
+                                    <li>Prepared presentation materials and demo</li>
+                                </ul>
+                            </div>
+                            <div class="brief-reflection">
+                                <h5><i class="fas fa-lightbulb"></i> Reflection</h5>
+                                <p>Successful project completion with a viable solution that balances user needs, technical feasibility, and heritage site requirements. Strong team collaboration throughout.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -253,6 +442,37 @@
             duration: 1000,
             once: true,
             offset: 100
+        });
+
+        // Daily Briefs Modal Functions
+        function openDailyBriefsModal() {
+            document.getElementById('dailyBriefsModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+            // Reinitialize AOS for modal content
+            setTimeout(() => {
+                AOS.refresh();
+            }, 100);
+        }
+
+        function closeDailyBriefsModal() {
+            document.getElementById('dailyBriefsModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('dailyBriefsModal');
+            if (event.target == modal) {
+                closeDailyBriefsModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeDailyBriefsModal();
+            }
         });
     </script>
 </body>
