@@ -1123,7 +1123,7 @@ html {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #C4621A 0%, #C4621A 33%, #FF5722 33%, #FF5722 66%, #FF8F00 66%, #FF8F00 100%);
+    background: linear-gradient(90deg, #C4621A 0%, #C4621A 33%, #B8860B 33%, #B8860B 66%, #FF8F00 66%, #FF8F00 100%);
     border-radius: 3px;
     width: 100%;
     transition: width 2s ease-in-out;
@@ -1175,8 +1175,8 @@ html {
 }
 
 .date-marker.mid { 
-    background: linear-gradient(135deg, #FF5722, #FF6B35);
-    border-color: #FF5722;
+    background: linear-gradient(135deg, #B8860B, #DAA520);
+    border-color: #B8860B;
 }
 
 .date-marker.end { 
@@ -1200,7 +1200,7 @@ html {
     left: 50%;
     width: 2px;
     height: 2rem;
-    background: linear-gradient(180deg, #C4621A 0%, #C4621A 33%, #FF5722 33%, #FF5722 66%, #FF8F00 66%, #FF8F00 100%);
+    background: linear-gradient(180deg, #C4621A 0%, #C4621A 33%, #B8860B 33%, #B8860B 66%, #FF8F00 66%, #FF8F00 100%);
     opacity: 0.8;
     transform: translateX(-50%);
 }
@@ -1232,7 +1232,7 @@ html {
 }
 
 .ideation-card::after {
-    background: linear-gradient(180deg, #FF5722, rgba(255, 87, 34, 0.4));
+    background: linear-gradient(180deg, #B8860B, rgba(184, 134, 11, 0.4));
 }
 
 .prototype-card::after {
@@ -1259,7 +1259,7 @@ html {
 }
 
 .ideation-card::before {
-    background: linear-gradient(90deg, #FF5722, #FF6B35);
+    background: linear-gradient(90deg, #B8860B, #DAA520);
 }
 
 .prototype-card::before {
@@ -1290,7 +1290,7 @@ html {
 }
 
 .card-icon.ideation {
-    background: linear-gradient(135deg, #FF5722, #FF6B35);
+    background: linear-gradient(135deg, #B8860B, #DAA520);
 }
 
 .card-icon.prototype {
@@ -1396,7 +1396,7 @@ html {
 }
 
 .ideation-card .timeline-range {
-    background: linear-gradient(135deg, #FF5722, #FF6B35);
+    background: linear-gradient(135deg, #B8860B, #DAA520);
 }
 
 .prototype-card .timeline-range {
@@ -1457,7 +1457,7 @@ html {
 }
 
 .ideation-header {
-    background: linear-gradient(135deg, #FF5722 0%, #FF6B35 100%);
+    background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
 }
 
 .prototype-header {
