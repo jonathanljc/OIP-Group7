@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototyping & Testing - Kibble Palace Visitor Tracking Solution</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/friendsofglasgow.png" alt="Friends of Glasgow" class="nav-logo-img">
+                <span>Kibble Palace</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="design-journey.html" class="nav-link">Design Journey <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="design-journey.html" class="dropdown-link">Overview</a>
+                        <a href="research-discovery.html" class="dropdown-link">Research & Discovery</a>
+                        <a href="ideation-selection.html" class="dropdown-link">Ideation & Selection</a>
+                        <a href="prototyping-testing.html" class="dropdown-link active">Prototyping & Testing</a>
+                    </div>
+                </li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="reflection.html" class="nav-link">Reflection</a></li>
+                <li><a href="prototype.html" class="nav-link">Prototype</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header prototype-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="design-journey.html"><i class="fas fa-arrow-left"></i> Back to Design Journey</a>
+            </div>
+            <div class="phase-badge prototype">
+                <i class="fas fa-code"></i>
+                <span>Phase 3</span>
+            </div>
+            <h1 class="page-title">Prototyping & Testing</h1>
+            <p class="page-subtitle">Building interactive prototypes and validating with real users</p>
+            <div class="phase-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Days 7-10</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>4 Days Duration</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-rocket"></i>
+                    <span>Final Solution Delivered</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prototyping & Testing Content -->
+    <section class="section prototype-content">
+        <div class="container">
+            <div class="overview-card">
+                <div class="overview-content">
+                    <h2>Phase Overview</h2>
+                    <p class="overview-description">Developed interactive prototypes for both QR code and kiosk interfaces, progressing from low-fidelity paper prototypes to high-fidelity interactive demos with comprehensive user testing and validation.</p>
+                </div>
+                
+                <div class="overview-deliverables">
+                    <h3>Key Deliverables</h3>
+                    <div class="deliverables-list">
+                        <div class="deliverable-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <span>Lo-fi Prototypes</span>
+                        </div>
+                        <div class="deliverable-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Interactive Demos</span>
+                        </div>
+                        <div class="deliverable-item">
+                            <i class="fas fa-user-check"></i>
+                            <span>User Testing</span>
+                        </div>
+                        <div class="deliverable-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Final Solution</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Storyboarding Section -->
+            <div class="section-header">
+                <h2><i class="fas fa-book-open"></i> Storyboarding</h2>
+                <span class="section-badge">User Journey</span>
+            </div>
+            
+            <div class="storyboard-section">
+                <div class="methodology-overview">
+                    <p>We began our prototyping process with comprehensive storyboarding to map out user journeys and identify key interaction points. This helped us understand the complete visitor experience and design touchpoints that would seamlessly integrate into their natural flow.</p>
+                </div>
+                
+                <div class="storyboard-showcase">
+                    <div class="storyboard-image-container">
+                        <img src="assets/userstoryboard.jpg" alt="User Story Board" class="storyboard-image">
+                    </div>
+                    <div class="storyboard-insights">                                                
+                        <div class="storyboard-findings">
+                            <h3>Critical Discovery: Check-Out Challenge</h3>
+                            <div class="finding-content">
+                                <p>Storyboarding revealed that users might forget to check out after their visit. This poses a risk to exit data accuracy, which is critical for planning and budgeting.</p>
+                                
+                                <p>To address this, and inspired by positive user attitudes toward digital features during our user interviews, we introduced an <strong>Augmented Reality (AR) component</strong> to boost engagement while subtly reminding users to check out.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Prototyping Section -->
+            <div class="section-header">
+                <h2><i class="fas fa-layer-group"></i> Prototyping Process</h2>
+                <span class="section-badge">3 Phases</span>
+            </div>
+            
+            <div class="iterative-prototyping">
+                <div class="prototyping-methodology">
+                    <p>Following our storyboarding phase, we adopted an iterative prototyping approach, progressing from low-fidelity paper prototypes to high-fidelity interactive demos. This methodology allowed us to test and refine concepts quickly while minimizing development costs.</p>
+                </div>
+
+                <div class="prototyping-phases-simple">
+                    <div class="simple-phase">
+                        <div class="phase-header">
+                            <div class="phase-number">01</div>
+                            <h3>Lo-Fi Paper Prototypes</h3>
+                        </div>
+                        <div class="phase-description">
+                            <p>We came out with <strong>Lo-Fi paper prototypes</strong> to rapidly explore multiple interface concepts without technical constraints. This allowed us to quickly test different layouts, interaction flows, and user interface elements before committing to digital development.</p>
+                        </div>
+                        <div class="phase-assets-large">
+                            <div class="asset-container">
+                                <img src="assets/kiosk_lofi.jpg" alt="Lo-Fi Kiosk Prototype" class="phase-image-large">
+                            </div>
+                            <div class="asset-container">
+                                <img src="assets/qrcodescanning_lofi.jpg" alt="QR Scanning Prototype" class="phase-image-large">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="simple-phase">
+                        <div class="phase-header">
+                            <div class="phase-number">02</div>
+                            <h3>Hi-Fi Functional Prototypes</h3>
+                        </div>
+                        <div class="phase-description">
+                            <p>Then we developed <strong>Hi-Fi functional prototypes</strong> so that we could provide final validation of our design decisions. With realistic visuals, actual QR code generation, and functional interfaces, we could conduct comprehensive user testing and demonstrate the complete solution to stakeholders for final approval.</p>
+                        </div>
+                        <div class="phase-assets-large">
+                            <div class="asset-container">
+                                <img src="assets/qrcode.gif" alt="QR Code Generation" class="phase-image-large gif-enhanced">
+                            </div>
+                            <div class="asset-container">
+                                <img src="assets/kiosk.gif" alt="Kiosk Interface Demo" class="phase-image-large gif-enhanced">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="simple-phase">
+                        <div class="phase-header">
+                            <div class="phase-number">03</div>
+                            <h3>User Testing & Validation</h3>
+                        </div>
+                        <div class="phase-description">
+                            <p>Finally, we conducted <strong>comprehensive user testing</strong> with representatives from our identified user groups. This validation phase ensured our hybrid solution truly met the needs of all visitor demographics and provided valuable insights for final refinements.</p>
+                        </div>
+                        <div class="testing-results">
+                            <div class="test-result">
+                                <div class="result-icon success">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="result-content">
+                                    <h4>Accessibility Validated</h4>
+                                    <p>Both elderly visitors and families with children successfully used the hybrid system</p>
+                                </div>
+                            </div>
+                            <div class="test-result">
+                                <div class="result-icon success">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="result-content">
+                                    <h4>Stakeholder Approval</h4>
+                                    <p>Final solution met all heritage constraints and budget requirements</p>
+                                </div>
+                            </div>
+                            <div class="test-result">
+                                <div class="result-icon success">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="result-content">
+                                    <h4>Technical Feasibility</h4>
+                                    <p>Prototypes demonstrated reliable functionality across all target devices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Final Solution Section -->
+            <div class="section-header">
+                <h2><i class="fas fa-rocket"></i> Final Solution: Hybrid QR/Kiosk System with AR component</h2>
+                <span class="section-badge">Delivered</span>
+            </div>
+            
+            <div class="solution-overview">
+                <p>Our final solution successfully addresses all identified user needs and constraints through a comprehensive hybrid approach that ensures inclusivity while maintaining the heritage integrity of the Kibble Palace.</p>
+            </div>
+
+            <div class="solution-features">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h3>QR Code Interface</h3>
+                        <p>Mobile-friendly scanning for tech-savvy visitors with smartphone access</p>
+                        <ul>
+                            <li>No app download required</li>
+                            <li>Instant check-in/check-out</li>
+                            <li>Multi-language support</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Kiosk Interface</h3>
+                        <p>Physical touchscreen for visitors without smartphones or those preferring traditional interfaces</p>
+                        <ul>
+                            <li>Large, accessible buttons</li>
+                            <li>Simple navigation</li>
+                            <li>Group check-in support</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>AR Enhancement</h3>
+                        <p>Augmented reality component to increase engagement and remind users to check out</p>
+                        <ul>
+                            <li>Interactive experience</li>
+                            <li>Check-out reminders</li>
+                            <li>Enhanced visitor engagement</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data Analytics</h3>
+                        <p>Comprehensive visitor tracking and reporting for operational planning</p>
+                        <ul>
+                            <li>Real-time visitor counts</li>
+                            <li>Historical data analysis</li>
+                            <li>Budget planning insights</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Cards -->
+            <div class="phase-navigation-inline">
+                <div class="nav-cards-dual">
+                    <div class="nav-card prev-card">
+                        <div class="nav-content">
+                            <h3>Previous Phase</h3>
+                            <h2>Ideation & Selection</h2>
+                            <p>Generating creative solutions and selecting the most viable approach</p>
+                        </div>
+                        <a href="ideation-selection.html" class="nav-btn secondary">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Back to Phase 2</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-card next-card">
+                        <div class="nav-content">
+                            <h3>Explore More</h3>
+                            <h2>Interactive Prototype</h2>
+                            <p>Try our working prototype and see the solution in action</p>
+                        </div>
+                        <a href="prototype.html" class="nav-btn">
+                            <span>View Prototype</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kibble Palace Visitor Tracking Solution. Student Project - University of Glasgow. <img src="assets/UoG_logo.jpg" alt="University of Glasgow" class="footer-uni-logo"></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
