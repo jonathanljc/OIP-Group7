@@ -9228,7 +9228,7 @@ body:has(.about-section) {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .hero-overlay-team {
@@ -9239,9 +9239,9 @@ body:has(.about-section) {
     height: 100%;
     background: linear-gradient(
         135deg,
-        rgba(139, 69, 19, 0.85) 0%,
-        rgba(205, 133, 63, 0.8) 50%,
-        rgba(218, 165, 32, 0.75) 100%
+        rgba(139, 69, 19, 0.1) 0%,
+        rgba(205, 133, 63, 0.08) 50%,
+        rgba(218, 165, 32, 0.05) 100%
     );
     z-index: -1;
 }
@@ -9249,20 +9249,19 @@ body:has(.about-section) {
 .hero-content-team {
     text-align: center;
     color: white;
-    max-width: 900px;
-    padding: 3rem;
+    max-width: 650px;
+    padding: 1.5rem 2rem;
     animation: fadeInUp 1s ease-out;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-title-team {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.1;
     text-shadow: 
         0 4px 20px rgba(0, 0, 0, 0.8),
@@ -9271,15 +9270,15 @@ body:has(.about-section) {
 }
 
 .hero-subtitle-team {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    margin-bottom: 3rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin-bottom: 2rem;
     opacity: 1;
     line-height: 1.6;
     text-shadow: 
         0 2px 15px rgba(0, 0, 0, 0.8),
         0 1px 5px rgba(0, 0, 0, 0.9),
         1px 1px 3px rgba(0, 0, 0, 1);
-    max-width: 700px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     font-weight: 500;
@@ -9288,9 +9287,9 @@ body:has(.about-section) {
 .team-stats {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 .team-stats .stat-item {
@@ -9298,7 +9297,7 @@ body:has(.about-section) {
 }
 
 .team-stats .stat-number {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 900;
     color: var(--light-accent);
     display: block;
@@ -9310,7 +9309,7 @@ body:has(.about-section) {
 }
 
 .team-stats .stat-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 1;
     font-weight: 600;
     text-transform: uppercase;
