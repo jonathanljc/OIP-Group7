@@ -642,6 +642,21 @@ body:has(.design-journey-content) {
     min-height: 100vh;
 }
 
+/* Add more space between cards and footer on portfolio page */
+.portfolio-page #portfolio {
+    padding-bottom: 4rem !important;
+}
+
+.portfolio-page .footer {
+    margin-top: 0 !important;
+}
+
+/* Portfolio page background fix - remove yellow section */
+.portfolio-page {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
+    min-height: 100vh;
+}
+
 /* Prototype page background */
 #prototype {
     background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
@@ -7779,7 +7794,6 @@ body:has(.design-journey-content) {
 }
 
 .video-tile.featured {
-    border: 2px solid var(--accent-color);
     position: relative;
 }
 
