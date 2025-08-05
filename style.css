@@ -631,6 +631,17 @@ main {
     background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
 }
 
+/* Design Journey page background fix */
+body:has(.design-journey-content) {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
+}
+
+/* Alternative approach - target the design journey page specifically */
+.design-journey-page {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
+    min-height: 100vh;
+}
+
 /* Prototype page background */
 #prototype {
     background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
