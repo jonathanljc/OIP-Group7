@@ -3009,6 +3009,36 @@ main {
     margin: 0;
 }
 
+/* Figma iframe centering styles */
+.figma-iframe-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.figma-iframe-container iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.qr-showcase,
+.kiosk-showcase {
+    width: 100%;
+    display: block !important;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.demo-description {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.demo-description p {
+    color: var(--secondary-color);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
 /* Dashboard Recreation Styles */
 .dashboard-recreation {
     background: #f8f9fa;
@@ -5110,7 +5140,6 @@ main {
 }
 
 /* Update existing classes to work with new structure */
-.prototype-showcase,
 .workshop-showcase {
     margin: 2rem 0;
 }
