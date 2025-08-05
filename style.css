@@ -13266,9 +13266,9 @@ body:has(.about-section) {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: transparent; /* Remove base background to rely on specific overlay classes */
     backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    border: 1px solid transparent; /* Remove base border to rely on specific overlay classes */
     color: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -13312,48 +13312,30 @@ body:has(.about-section) {
     font-weight: 500;
 }
 
-.kiosk-overlay {
-    background: rgba(139, 69, 19, 0.75);
-    backdrop-filter: blur(20px);
-    color: white;
-    border: 1px solid rgba(139, 69, 19, 0.2);
-}
-
-.kiosk-overlay .prototype-overlay-title {
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.kiosk-overlay .prototype-overlay-subtitle {
-    color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.kiosk-overlay i {
-    color: var(--light-accent);
-    filter: drop-shadow(0 2px 8px rgba(244, 164, 96, 0.4));
-}
-
+.kiosk-overlay,
 .qr-overlay {
-    background: rgba(218, 165, 32, 0.75);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(20px);
     color: white;
-    border: 1px solid rgba(218, 165, 32, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.kiosk-overlay .prototype-overlay-title,
 .qr-overlay .prototype-overlay-title {
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
+.kiosk-overlay .prototype-overlay-subtitle,
 .qr-overlay .prototype-overlay-subtitle {
     color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.kiosk-overlay i,
 .qr-overlay i {
-    color: white;
-    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+    color: var(--accent-color);
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
 }
 
 /* Enhanced GIF styling - removed yellow border */
