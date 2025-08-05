@@ -68,11 +68,24 @@ body {
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: var(--primary-color);
     color: white;
-    padding: 2rem 0;
+    padding: 1.5rem;
     margin-top: auto;
     margin-bottom: 0 !important;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    color: var(--light-accent);
 }
 
 .footer-bottom {
@@ -91,10 +104,12 @@ body {
 }
 
 .footer-uni-logo {
-    height: 1.5rem;
+    height: 2em;
     width: auto;
     object-fit: contain;
     vertical-align: middle;
+    margin: 0 0.25rem;
+    opacity: 1 !important;
 }
 
 html, body {
@@ -363,40 +378,47 @@ html {
 }
 
 .btn-primary, .btn-secondary {
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     border: none;
     border-radius: var(--border-radius);
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: var(--transition-smooth);
     display: flex;
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn-primary {
-    background: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #f4a460 100%);
     color: white;
 }
 
 .btn-primary:hover {
-    background: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #f4a460 0%, var(--accent-color) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
 .btn-secondary {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.15);
     color: white;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     color: var(--primary-color);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    border-color: white;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 .hero-stats {
@@ -435,7 +457,7 @@ html {
 /* Page Header Styles */
 .page-header {
     padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, #6b3a0f 0%, var(--primary-color) 50%, #a54b16 100%);
     color: white;
     text-align: center;
 }
@@ -628,6 +650,7 @@ main {
     font-size: 0.9rem;
     font-weight: 600;
     display: inline-block;
+    border: 2px solid white;
 }
 
 .phase-badge.ideation {
@@ -638,6 +661,7 @@ main {
     font-size: 0.9rem;
     font-weight: 600;
     display: inline-block;
+    border: 2px solid white;
 }
 
 .phase-badge.prototype {
@@ -648,6 +672,50 @@ main {
     font-size: 0.9rem;
     font-weight: 600;
     display: inline-block;
+    border: 2px solid white;
+}
+
+/* Design Journey Navigation Buttons */
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    border: none;
+}
+
+.nav-btn:not(.secondary) {
+    background: var(--accent-color);
+    color: white;
+    box-shadow: 0 2px 8px rgba(218, 165, 32, 0.3);
+}
+
+.nav-btn:not(.secondary):hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4);
+}
+
+.nav-btn.secondary {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3) !important;
+}
+
+.nav-btn.secondary:hover {
+    background: var(--primary-color) !important;
+    color: white !important;
+    transform: translateY(-3px) !important;
+    border: 2px solid var(--primary-color) !important;
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4) !important;
 }
 
 /* Simple section headers */
@@ -989,7 +1057,6 @@ main {
 
 /* Inline phase navigation within content */
 .phase-navigation-inline {
-    margin-top: 4rem;
     padding-top: 3rem;
     text-align: center;
 }
@@ -1035,7 +1102,7 @@ main {
 }
 
 .phase-navigation-inline .nav-btn {
-    background: linear-gradient(135deg, var(--accent-color), var(--warm-bronze));
+    background: linear-gradient(135deg, var(--accent-color) 0%, #f4a460 100%);;
     color: white;
     padding: 1rem 2rem;
     border-radius: var(--border-radius);
@@ -2491,11 +2558,6 @@ main {
     font-weight: 500;
 }
 
-/* Expanded Card Styles */
-.expanded-card {
-    /* Additional styles for expanded timeline cards */
-}
-
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -3189,7 +3251,6 @@ main {
     .need-item {
         margin-bottom: 1rem;
     }
-}
 
 /* Additional mobile adjustments for interview section */
 @media (max-width: 480px) {
@@ -3886,7 +3947,7 @@ main {
 }
 
 .justification-grid th {
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: white;
     padding: 1.5rem;
     text-align: left;
@@ -7570,40 +7631,6 @@ main {
     font-weight: 500;
 }
 
-/* Footer */
-.footer {
-    background: var(--primary-color);
-    color: white;
-    padding: 3rem 0 1rem;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-section h3 {
-    margin-bottom: 1rem;
-    font-family: var(--font-heading);
-    color: var(--light-accent);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    opacity: 0.8;
-}
-
-.footer-uni-logo {
-    height: 2em;
-    width: auto;
-    vertical-align: middle;
-    margin: 0 0.25rem;
-    object-fit: contain;
-}
-
 /* Solution Method Icons */
 .method-icon {
     color: white !important;
@@ -9297,7 +9324,6 @@ main {
 .reflection-summary-section {
     background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
     padding: 4rem 0;
-    min-height: 100vh;
 }
 
 .reflection-grid {
@@ -9421,7 +9447,6 @@ main {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background: var(--warm-bronze);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12499,7 +12524,7 @@ body:has(.about-section) {
     color: var(--secondary-color);
 }
 
-.workflow-insights .insight-item i {
+.workflow-insights {
     color: #28a745;
     font-size: 1rem;
 }
@@ -13422,12 +13447,6 @@ body:has(.about-section) {
 
 .insight-item:last-child {
     margin-bottom: 0;
-}
-
-.insight-item i {
-    color: #28a745;
-    width: 18px;
-    font-size: 1rem;
 }
 
 /* Integrated Workflow - Full Image Display */
