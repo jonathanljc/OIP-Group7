@@ -1,4 +1,21 @@
 // Global variables
+// Function to get CSS variable values
+function getCSSVariable(variable) {
+    return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+}
+
+// Color constants using CSS variables
+const COLORS = {
+    primary: () => getCSSVariable('--primary-color'),
+    secondary: () => getCSSVariable('--secondary-color'),
+    accent: () => getCSSVariable('--accent-color'),
+    success: () => getCSSVariable('--success-color'),
+    warning: () => getCSSVariable('--warning-color'),
+    error: () => getCSSVariable('--error-color'),
+    info: () => getCSSVariable('--info-color'),
+    warningLight: () => getCSSVariable('--warning-light'),
+    warningText: '#856404' // Keep this specific color for contrast
+};
 let currentVisitorCount = 47;
 let isCheckedIn = false;
 
@@ -17,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePrototypeTabs();
     initializeAnimations();
     initializeChart();
+    initializeTextSweepAnimation();
     initializeAOS();
     
     // Add smooth scrolling for all anchor links
@@ -194,7 +212,7 @@ function simulateQRScan() {
     
     // Add scanning animation
     qrCode.style.animation = 'none';
-    qrCode.style.background = '#ff6b6b';
+    qrCode.style.background = COLORS.error();
     qrCode.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
     
     setTimeout(() => {
@@ -204,7 +222,7 @@ function simulateQRScan() {
             isCheckedIn = true;
             scanResult.innerHTML = '✅ Successfully checked in!';
             scanResult.className = 'scan-result success';
-            qrCode.style.background = '#51cf66';
+            qrCode.style.background = COLORS.success();
             qrCode.innerHTML = '<i class="fas fa-check"></i>';
         } else {
             // Check out
@@ -212,7 +230,7 @@ function simulateQRScan() {
             isCheckedIn = false;
             scanResult.innerHTML = '✅ Successfully checked out!';
             scanResult.className = 'scan-result success';
-            qrCode.style.background = '#ffd43b';
+            qrCode.style.background = COLORS.warning();
             qrCode.innerHTML = '<i class="fas fa-sign-out-alt"></i>';
         }
         
@@ -245,8 +263,8 @@ function simulateKioskAction(action) {
     
     // Show processing message
     kioskResult.innerHTML = '⏳ Processing...';
-    kioskResult.style.background = '#fff3cd';
-    kioskResult.style.color = '#856404';
+    kioskResult.style.background = COLORS.warningLight();
+    kioskResult.style.color = COLORS.warningText;
     
     setTimeout(() => {
         if (action === 'check-in') {
@@ -318,8 +336,8 @@ function drawVisitorChart(ctx, width, height) {
     ctx.clearRect(0, 0, width, height);
     
     // Set styles
-    ctx.strokeStyle = '#7fb069';
-    ctx.fillStyle = 'rgba(127, 176, 105, 0.2)';
+    ctx.strokeStyle = COLORS.success();
+    ctx.fillStyle = COLORS.success() + '33'; // Adding 33 for 20% opacity
     ctx.lineWidth = 3;
     ctx.font = '12px Inter';
     ctx.textAlign = 'center';
@@ -345,7 +363,7 @@ function drawVisitorChart(ctx, width, height) {
     ctx.stroke();
     
     // Draw points
-    ctx.fillStyle = '#7fb069';
+    ctx.fillStyle = COLORS.success();
     points.forEach(point => {
         ctx.beginPath();
         ctx.arc(point.x, point.y, 4, 0, Math.PI * 2);
@@ -353,7 +371,7 @@ function drawVisitorChart(ctx, width, height) {
     });
     
     // Draw labels
-    ctx.fillStyle = '#666';
+    ctx.fillStyle = COLORS.primary();
     labels.forEach((label, index) => {
         const x = padding + (index * chartWidth) / (data.length - 1);
         ctx.fillText(label, x, height - 10);
@@ -460,6 +478,31 @@ function initializeTimelineAnimations() {
 
 // Initialize timeline animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeTimelineAnimations);
+
+// Text sweep animation for h2 elements
+function initializeTextSweepAnimation() {
+    const h2Elements = document.querySelectorAll('h2');
+    
+    h2Elements.forEach(h2 => {
+        // Create overlay element for sweep effect
+        const overlay = document.createElement('div');
+        overlay.className = 'text-sweep-overlay';
+        
+        // Position overlay
+        h2.style.position = 'relative';
+        h2.style.overflow = 'hidden';
+        h2.appendChild(overlay);
+        
+        // Add hover event listeners
+        h2.addEventListener('mouseenter', () => {
+            overlay.style.transform = 'translateX(0%)';
+        });
+        
+        h2.addEventListener('mouseleave', () => {
+            overlay.style.transform = 'translateX(-100%)';
+        });
+    });
+}
 
 // Initialize AOS (Animate On Scroll) library
 function initializeAOS() {
@@ -685,7 +728,7 @@ function drawVisitorLineChart() {
     const maxValue = Math.max(...data);
     
     // Draw grid lines
-    ctx.strokeStyle = '#f3f4f6';
+    ctx.strokeStyle = '#f3f4f6'; // Keep neutral grid color
     ctx.lineWidth = 1;
     for (let i = 0; i <= 5; i++) {
         const y = (height - 60) * (i / 5) + 30;
@@ -696,7 +739,7 @@ function drawVisitorLineChart() {
     }
     
     // Draw the purple line
-    ctx.strokeStyle = '#8b5cf6';
+    ctx.strokeStyle = COLORS.accent();
     ctx.lineWidth = 3;
     ctx.beginPath();
     
@@ -711,7 +754,7 @@ function drawVisitorLineChart() {
         }
         
         // Draw data points
-        ctx.fillStyle = '#8b5cf6';
+        ctx.fillStyle = COLORS.accent();
         ctx.beginPath();
         ctx.arc(x, y, 4, 0, 2 * Math.PI);
         ctx.fill();
@@ -719,7 +762,7 @@ function drawVisitorLineChart() {
     ctx.stroke();
     
     // Draw month labels
-    ctx.fillStyle = '#6b7280';
+    ctx.fillStyle = COLORS.primary();
     ctx.font = '12px Inter';
     ctx.textAlign = 'center';
     months.forEach((month, index) => {
@@ -757,7 +800,7 @@ function drawTimeSlotsChart() {
         const y = height - 60 - barHeight;
         
         // Draw bar
-        ctx.fillStyle = index === 1 ? '#3b82f6' : '#e5e7eb';
+        ctx.fillStyle = index === 1 ? COLORS.info() : '#e5e7eb';
         ctx.fillRect(x, y, barWidth * 0.6, barHeight);
         
         // Draw value label for highlighted bar
@@ -805,7 +848,7 @@ function drawDemographicsChart() {
         const y = height - 60 - barHeight;
         
         // Draw bar
-        ctx.fillStyle = index === 4 ? '#3b82f6' : '#e5e7eb';
+        ctx.fillStyle = index === 4 ? COLORS.info() : '#e5e7eb';
         ctx.fillRect(x, y, barWidth * 0.6, barHeight);
         
         // Draw value label for highlighted bar
@@ -853,19 +896,19 @@ function drawFootfallChart() {
         const durationHeight = Math.random() * 30 + 10;
         
         // Draw manual entry bars (red)
-        ctx.fillStyle = '#ef4444';
+        ctx.fillStyle = COLORS.error();
         ctx.fillRect(x, height - 40 - manualHeight, barWidth * 0.25, manualHeight);
         
         // Draw QR code bars (blue)
-        ctx.fillStyle = '#3b82f6';
+        ctx.fillStyle = COLORS.info();
         ctx.fillRect(x + (barWidth * 0.3), height - 40 - qrHeight, barWidth * 0.25, qrHeight);
         
         // Draw duration bars (purple)
-        ctx.fillStyle = '#8b5cf6';
+        ctx.fillStyle = COLORS.accent();
         ctx.fillRect(x + (barWidth * 0.6), height - 40 - durationHeight, barWidth * 0.25, durationHeight);
         
         // Draw month labels
-        ctx.fillStyle = '#6b7280';
+        ctx.fillStyle = COLORS.primary();
         ctx.font = '10px Inter';
         ctx.textAlign = 'center';
         ctx.fillText(month, x + (barWidth * 0.5), height - 10);
