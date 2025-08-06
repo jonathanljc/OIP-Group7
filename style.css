@@ -911,10 +911,98 @@ body:has(.design-journey-content) {
     margin: 0;
 }
 
+/* Centered prioritization matrix layout */
+.prioritization-showcase-centered {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.prioritization-showcase-centered h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.prioritization-showcase-centered > p {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.prioritization-showcase-centered .axis-explanation {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.prioritization-showcase-centered > p:last-of-type {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.matrix-image-container-medium {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.matrix-image-medium {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+}
+
+.matrix-image-container-medium:hover .matrix-image-medium {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.click-to-expand-overlay-medium {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+    border-radius: var(--border-radius);
+    z-index: 2;
+}
+
+.matrix-image-container-medium:hover .click-to-expand-overlay-medium {
+    opacity: 1;
+}
+
+.click-to-expand-overlay-medium .expand-content {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.click-to-expand-overlay-medium .expand-content i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
 @media (max-width: 768px) {
     .axis-explanation {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    
+    .matrix-image-container-medium {
+        max-width: 100%;
+        margin: 1rem auto;
     }
 }
 
