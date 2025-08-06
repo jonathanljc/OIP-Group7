@@ -5221,13 +5221,14 @@ body:has(.design-journey-content) {
     background-color: white;
     margin: 2% auto;
     padding: 0;
-    border-radius: var(--border-radius-lg);
+    border-radius: 2rem;
     width: 95%;
     max-width: 1200px;
     max-height: 90vh;
     overflow-y: auto;
     box-shadow: var(--shadow-lg);
     animation: modalSlideIn 0.3s ease-out;
+    overflow: hidden;
 }
 
 @keyframes modalSlideIn {
@@ -5242,13 +5243,14 @@ body:has(.design-journey-content) {
 }
 
 .modal-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, #6b3a0f 0%, var(--primary-color) 50%, #a54b16 100%);
     color: white;
     padding: 2rem;
-    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    position: relative;
 }
 
 .modal-header h2 {
@@ -9759,15 +9761,6 @@ body:has(.design-journey-content) {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.modal-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .modal-header h2 {
