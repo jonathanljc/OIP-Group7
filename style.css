@@ -9270,15 +9270,15 @@ body:has(.design-journey-content) {
 }
 
 .date-badge.research {
-    background: linear-gradient(135deg, #C4621A, #D2691E);
+    background: linear-gradient(135deg, #F4A460, #CD853F);
 }
 
 .date-badge.ideation {
-    background: linear-gradient(135deg, #B8860B, #DAA520);
+    background: linear-gradient(135deg, #CD853F, #8B4513);
 }
 
 .date-badge.prototype {
-    background: linear-gradient(135deg, #FF8F00, #FFA000);
+    background: linear-gradient(135deg, #8B4513, #654321);
 }
 
 .phase-label {
