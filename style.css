@@ -864,6 +864,77 @@ body:has(.design-journey-content) {
     font-size: 0.9rem;
 }
 
+/* Process Flow Enhanced - Full Width Layout */
+.process-flow-enhanced {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 3rem 0 4rem 0;
+    width: 100%;
+}
+
+.process-step-enhanced {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #e0e0e0;
+    min-height: 200px;
+}
+
+.process-step-enhanced .step-number {
+    background: var(--accent-color);
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.process-step-enhanced .step-content-enhanced {
+    flex: 1;
+}
+
+.process-step-enhanced .step-content-enhanced h3 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.process-step-enhanced .step-content-enhanced p {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.step-deliverables {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.deliverable {
+    background: #f0f0f0;
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
 /* Increased spacing for ideation page process steps */
 .ideation-content .process-step-enhanced {
     gap: 4rem;
@@ -875,6 +946,18 @@ body:has(.design-journey-content) {
 
 .ideation-content .step-content-enhanced {
     margin-left: 2rem;
+}
+
+/* Responsive design for process flow */
+@media (max-width: 1024px) {
+    .process-flow-enhanced {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .process-step-enhanced {
+        min-height: auto;
+    }
 }
 
 /* Matrix methodology styling */
@@ -917,7 +1000,8 @@ body:has(.design-journey-content) {
     text-align: center;
 }
 
-.prioritization-showcase-centered h3 {
+.prioritization-showcase-centered h3,
+.prioritization-showcase-centered h4 {
     text-align: left;
     margin-bottom: 1rem;
 }
@@ -5863,7 +5947,6 @@ body:has(.design-journey-content) {
 }
 
 .prototyping-methodology p {
-    margin-bottom: 2rem;
     color: var(--primary-color);
     line-height: 1.6;
     font-size: 1rem;
@@ -5880,7 +5963,6 @@ body:has(.design-journey-content) {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin: 3rem 0;
 }
 
 .simple-phase {
@@ -5979,8 +6061,6 @@ body:has(.design-journey-content) {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin: 2rem 0;
-    padding: 2rem;
-    background: rgba(244, 164, 96, 0.05);
     border-radius: var(--border-radius);
     border: 1px solid var(--glass-border);
 }
@@ -13687,7 +13767,11 @@ body:has(.about-section) {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin: 4rem 0 3rem 0;
+}
+
+.phase-header-enhanced:first-child {
+    margin-top: 2rem;
     padding-bottom: 1rem;
 }
 
