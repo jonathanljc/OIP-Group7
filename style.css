@@ -4128,7 +4128,7 @@ body:has(.design-journey-content) {
 }
 
 .justification-table {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .table-container {
@@ -4169,6 +4169,7 @@ body:has(.design-journey-content) {
     color: var(--secondary-color);
     font-size: 1.1rem;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Enhanced Design Journey Section */
@@ -4745,6 +4746,13 @@ body:has(.design-journey-content) {
 .process-flow-enhanced {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.methodology-section .process-flow-enhanced {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 1.5rem;
 }
@@ -6648,7 +6656,6 @@ body:has(.design-journey-content) {
 
 .solution-header i {
     font-size: 2rem;
-    margin-right: 1rem;
 }
 
 .solution-header h4 {
@@ -14137,4 +14144,296 @@ body:has(.about-section) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+}
+
+/* Solution Justification Section - Same background as other sections */
+.justification-section {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)
+}
+
+/* Pre-existing Solution Section Styling */
+.preexisting-solution-section {
+    margin: 2rem 0;
+}
+
+.solution-overview-card {
+    background: white;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-color);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.solution-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background: linear-gradient(135deg, rgba(218, 165, 32, 0.1) 0%, rgba(205, 133, 63, 0.1) 100%);
+}
+
+.solution-icon {
+    background: var(--accent-color);
+    color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.solution-icon .fa-wifi {
+    transform: translateY(-1px);
+}
+
+.solution-title h3 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.solution-subtitle {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0;
+}
+
+.solution-description {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.solution-description p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.solution-analysis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.analysis-section h4 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.analysis-section h4 i {
+    font-size: 1rem;
+}
+
+.analysis-section h4 .fa-check-circle {
+    color: var(--success-color);
+}
+
+.analysis-section h4 .fa-times-circle {
+    color: var(--error-color);
+}
+
+.analysis-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.analysis-list li {
+    padding: 0.5rem 0;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.analysis-list.positive li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.analysis-list.negative li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.solution-impact {
+    padding: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.impact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(218, 165, 32, 0.1) 0%, rgba(205, 133, 63, 0.1) 100%);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--glass-border);
+}
+
+.impact-card.failure {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.1) 0%, rgba(255, 193, 7, 0.1) 100%);
+}
+
+.impact-icon {
+    background: var(--accent-color);
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.impact-card.failure .impact-icon {
+    background: var(--warning-color);
+}
+
+.impact-content h4 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.impact-content p {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.stakeholder-quote {
+    padding: 2rem;
+    background: #f8f9fa;
+}
+
+.quote-content {
+    position: relative;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.quote-content i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.quote-content p {
+    color: var(--primary-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.quote-attribution {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: block;
+    text-align: right;
+}
+
+/* Dashboard Testing Note Styling */
+.dashboard-testing-note {
+    font-style: italic;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: 2rem !important;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    background: rgba(244, 164, 96, 0.1);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-color)
+}
+
+.dashboard-testing-note .note-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard-testing-note .note-icon {
+    background: var(--info-color);
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.dashboard-testing-note .note-header h4 {
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.dashboard-testing-note .note-content p {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive design for pre-existing solution */
+@media (max-width: 768px) {
+    .preexisting-solution-section .solution-analysis {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .preexisting-solution-section .solution-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .preexisting-solution-section .impact-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .dashboard-testing-note .note-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
 }
