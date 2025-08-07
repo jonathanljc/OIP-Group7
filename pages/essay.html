@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay - Kibble Palace Visitor Tracking Solution</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="portfolio-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/friendsofglasgow.png" alt="Friends of Glasgow" class="nav-logo-img">
+                <span>Kibble Palace</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-dropdown">
+                    <a href="../index.html" class="nav-link">Overview <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../index.html#problem" class="dropdown-link">Problem</a>
+                        <a href="../index.html#solution" class="dropdown-link">Solution</a>
+                        <a href="../index.html#justification" class="dropdown-link">Solution Justification</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="design_journey/design-journey.html" class="nav-link">Design Journey <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="design_journey/design-journey.html" class="dropdown-link">Timeline Summary</a>
+                        <a href="design_journey/research-discovery.html" class="dropdown-link">Research & Discovery</a>
+                        <a href="design_journey/ideation-selection.html" class="dropdown-link">Ideation & Selection</a>
+                        <a href="design_journey/prototyping-testing.html" class="dropdown-link">Prototyping & Testing</a>
+                    </div>
+                </li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="reflection.html" class="nav-link">Reflection</a></li>
+                <li><a href="essay.html" class="nav-link active">Essay</a></li>
+                <li><a href="prototype.html" class="nav-link">Prototype</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Critical Assessment Essay</h1>
+            <p class="page-subtitle">Honest evaluation of our work, achievements, and areas for growth</p>
+        </div>
+    </section>
+
+    <!-- Essay Content Section -->
+    <section style="padding: 80px 0; background: transparent;">
+        <div class="container">
+            <div class="essay-card" style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" data-aos="fade-up">
+                <div class="essay-header" style="text-align: center; margin-bottom: 40px;">
+                    <span style="display: inline-block; background: linear-gradient(135deg, var(--accent-color) 0%, #f4a460 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 16px;">Critical Assessment</span>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 16px; color: #2c3e50;">Work Evaluation</h2>
+                    <p style="color: #666; font-size: 1.1rem;">Honest assessment of achievements and growth areas</p>
+                </div>
+                
+                <div class="essay-summary" style="margin-bottom: 30px;">
+                    <p style="font-size: 1.2rem; line-height: 1.6; color: #555; text-align: center; font-style: italic;">
+                        Reflecting on our work reveals a complex mix of pride and humility. While we achieved core objectives and created a stakeholder-focused solution, the process revealed areas where our approach could have been more sophisticated.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                        <h4 style="color: #27ae60; margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="margin-right: 8px;"></i>Proud Of</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 8px; color: #555;">• Inclusive design philosophy</li>
+                            <li style="margin-bottom: 8px; color: #555;">• Stakeholder-centered process</li>
+                            <li style="margin-bottom: 8px; color: #555;">• Heritage sensitivity</li>
+                            <li style="margin-bottom: 8px; color: #555;">• Team collaboration</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                        <h4 style="color: #e74c3c; margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>Areas to Improve</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 8px; color: #555;">• User testing scale</li>
+                            <li style="margin-bottom: 8px; color: #555;">• Implementation planning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button onclick="openAssessmentModal()" style="background: linear-gradient(135deg, var(--accent-color) 0%, #f4a460 100%); color: white; border: none; padding: 12px 24px; border-radius: 25px; font-weight: 600; cursor: pointer; transition: var(--transition-fast); display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.background='linear-gradient(135deg, #f4a460 0%, var(--accent-color) 100%)'; this.style.boxShadow='0 8px 25px rgba(218, 165, 32, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='linear-gradient(135deg, var(--accent-color) 0%, #f4a460 100%)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.3)'"">
+                        <span>Read Full Assessment</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Assessment Modal -->
+    <div id="assessmentModal" class="reflection-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Work Assessment - Full Evaluation</h2>
+                <span class="close" onclick="closeAssessmentModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="modal-lead">Reflecting on our work for the Kibble Palace visitor tracking project, we find ourselves experiencing a complex mix of pride and humility. While we achieved our core objectives and created a solution that addresses real stakeholder needs, the process also revealed areas where our approach could have been more sophisticated and our execution more thorough.</p>
+                
+                <h3>What We Are Proud Of</h3>
+                
+                <h4>Inclusive Design Philosophy</h4>
+                <p>We are particularly proud of our commitment to inclusive design from the project's inception. The decision to develop a hybrid QR/Kiosk system wasn't just a technical choice—it was a philosophical statement about who deserves access to digital services. Too often, technology projects assume universal comfort with smartphones and digital interfaces. Our solution acknowledges that meaningful innovation must serve diverse user groups with varying technological capabilities.</p>
+                
+                <p>This inclusive approach extended beyond just providing multiple interaction methods. We considered cognitive load, physical accessibility, and varying levels of digital literacy in our interface designs. The large, clear buttons on our kiosk interface and the simple, intuitive QR code process reflect our understanding that good design should feel effortless for all users.</p>
+                
+                <h4>Stakeholder-Centered Process</h4>
+                <p>Our approach to stakeholder engagement represents another significant strength. Rather than treating Friends of Glasgow as passive recipients of our solution, we positioned them as active collaborators in the design process. This wasn't just good practice—it was essential for creating a solution that would actually work in their operational context.</p>
+                
+                <p>The iterative feedback loops we established ensured that our solution evolved in response to real needs rather than theoretical assumptions. Every major design decision was validated against operational requirements and user feedback, resulting in a more grounded and practical final product.</p>
+                
+                <h4>Heritage Sensitivity</h4>
+                <p>Successfully balancing modern technology with respect for Kibble Palace's historical significance required careful consideration and creative problem-solving. We're proud that we found ways to implement visitor tracking without compromising the site's aesthetic integrity or requiring structural modifications that could damage the heritage fabric.</p>
+                
+                <p>Our non-invasive approach, using portable kiosks and discrete QR code placements, demonstrates that innovation doesn't require disruption. Sometimes the most sophisticated solution is the one that integrates seamlessly with existing conditions.</p>
+                
+                <h4>Team Collaboration and Communication</h4>
+                <p>Despite our diverse backgrounds and varying levels of experience with different aspects of the project, we maintained excellent communication and shared ownership throughout the process. Our daily briefs and regular check-ins ensured that everyone remained aligned on objectives and progress, while our collaborative decision-making process meant that the final solution truly represents our collective expertise.</p>
+                
+                <h3>What We Are Not Proud Of</h3>
+                
+                <h4>Limited User Testing Scale</h4>
+                <p>Our user testing, while valuable, was limited in scope and scale. Testing primarily with fellow students and a small number of external participants provided useful feedback, but it couldn't fully validate our assumptions about how actual Kibble Palace visitors would interact with the system.</p>
+                
+                <p>A more comprehensive testing approach would have included longer-term usability studies and testing with a broader demographic range. The constraints of our project timeline made this challenging, but we recognize that more extensive testing would have strengthened our solution significantly.</p>
+                
+                <h4>Implementation and Change Management Planning</h4>
+                <p>Perhaps our most significant oversight was the limited attention we paid to implementation planning and change management. While we created a functional solution, we didn't adequately address how it would be deployed, how staff would be trained, or how the transition from current practices would be managed.</p>
+                
+                <p>Real-world technology implementation requires careful planning for staff training, system integration, maintenance procedures, and contingency planning. Our focus on the solution itself meant that these crucial implementation considerations received insufficient attention.</p>
+                
+                <h3>Lessons Learned and Future Applications</h3>
+                <p>This project taught us that successful design isn't just about creating elegant solutions—it's about understanding constraints, respecting context, and prioritizing user needs over technological sophistication. The most innovative solution isn't always the most appropriate one.</p>
+                
+                <p>We learned the value of iterative design and remaining flexible as new information emerges. Our willingness to pivot from a mobile-only solution to a hybrid approach resulted in a much stronger final product. This experience reinforced that good design requires both creative vision and practical wisdom.</p>
+                
+                <p>Perhaps most importantly, we discovered that the best solutions often emerge from the intersection of user needs, technical feasibility, and contextual constraints—not from pushing the boundaries of any single dimension. This holistic approach to problem-solving will inform our future work and help us create solutions that are both innovative and implementable.</p>
+                
+                <h3>Conclusion</h3>
+                <p>While there are aspects of our work that could have been stronger, we believe we created a solution that genuinely addresses stakeholder needs while respecting the unique constraints of heritage site management. The project provided valuable learning experiences that will inform our future practice and demonstrated our ability to collaborate effectively on complex, real-world challenges.</p>
+                
+                <p>The process of critical self-assessment has been as valuable as the design work itself, helping us understand not just what we accomplished, but how we can grow as designers and collaborators in future projects.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kibble Palace Visitor Tracking Solution. Student Project - University of Glasgow. <img src="../assets/UoG_logo.jpg" alt="University of Glasgow" class="footer-uni-logo"></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Modal Functions
+        function openAssessmentModal() {
+            document.getElementById('assessmentModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAssessmentModal() {
+            document.getElementById('assessmentModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const assessmentModal = document.getElementById('assessmentModal');
+            
+            if (event.target == assessmentModal) {
+                closeAssessmentModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeAssessmentModal();
+            }
+        });
+    </script>
+</body>
+</html>
