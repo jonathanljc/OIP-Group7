@@ -733,7 +733,6 @@ body:has(.design-journey-content) {
     color: var(--primary-color) !important;
     border: 2px solid var(--primary-color) !important;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3) !important;
 }
 
 .nav-btn.secondary:hover {
@@ -741,7 +740,6 @@ body:has(.design-journey-content) {
     color: white !important;
     transform: translateY(-3px) !important;
     border: 2px solid var(--primary-color) !important;
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4) !important;
 }
 
 /* Simple section headers */
@@ -1300,7 +1298,7 @@ body:has(.design-journey-content) {
 }
 
 .phase-navigation-inline .nav-btn {
-    background: linear-gradient(135deg, var(--accent-color) 0%, #f4a460 100%);;
+    background: linear-gradient(135deg, var(--accent-color) 100%, #f4a460 0%);;
     color: white;
     padding: 1rem 2rem;
     border-radius: var(--border-radius);
