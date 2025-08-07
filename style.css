@@ -14920,33 +14920,15 @@ body:has(.about-section) {
     color: white;
 }
 
-.result-badge.selected::before {
-    content: "\f00c";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: white;
-}
 
 .result-badge.considered {
     background: var(--warning-color);
     color: white;
 }
 
-.result-badge.considered::before {
-    content: "\f071";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: white;
-}
 
 .result-badge.rejected {
     background: var(--error-color);
     color: white;
 }
 
-.result-badge.rejected::before {
-    content: "\f00d";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: white;
-}
