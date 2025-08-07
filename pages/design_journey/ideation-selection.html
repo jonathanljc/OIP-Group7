@@ -18,7 +18,7 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-dropdown">
-                    <a href="../../index.html" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
+                    <a href="../../index.html" class="nav-link">Overview <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="../../index.html#problem" class="dropdown-link">Problem</a>
                         <a href="../../index.html#solution" class="dropdown-link">Solution</a>
@@ -28,7 +28,7 @@
                 <li class="nav-dropdown">
                     <a href="design-journey.html" class="nav-link active">Design Journey <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="design-journey.html" class="dropdown-link">Overview</a>
+                        <a href="design-journey.html" class="dropdown-link">Timeline Summary</a>
                         <a href="research-discovery.html" class="dropdown-link">Research & Discovery</a>
                         <a href="ideation-selection.html" class="dropdown-link active">Ideation & Selection</a>
                         <a href="prototyping-testing.html" class="dropdown-link">Prototyping & Testing</a>
@@ -196,14 +196,116 @@
                     </div>
                     <p>This strategic tool allowed us to visualize trade-offs and highlight the most practical and impactful solutions.</p>
 
-                    <div class="matrix-image-container-medium" onclick="openSolutionsModal()">
-                        <img src="../../assets/prioritization_matrix.jpg" alt="Prioritization Matrix" class="matrix-image-medium clickable">
-                        <div class="click-to-expand-overlay-medium">
-                            <div class="expand-content">
-                                <i class="fas fa-expand-alt"></i>
-                                <span>Click to expand</span>
+                    <!-- Matrix Image -->
+                    <div class="matrix-image-container-medium">
+                        <img src="../../assets/prioritization_matrix.jpg" alt="Prioritization Matrix" class="matrix-image-medium">
+                    </div>
+                    
+                    <!-- Solutions Table -->
+                    <div class="solutions-table">
+                            <div class="solutions-row solutions-header">
+                                <div class="solution-name">Solution</div>
+                                <div class="solution-position">Matrix Position</div>
+                                <div class="solution-explored">Why Explored</div>
+                                <div class="solution-issues">Issues</div>
+                                <div class="solution-result">Result</div>
                             </div>
-                        </div>
+                            
+                            <div class="solutions-row selected">
+                                <div class="solution-name">
+                                    <i class="fas fa-qrcode solution-icon-small"></i>
+                                    <span>QR Code Check-In</span>
+                                </div>
+                                <div class="solution-position">
+                                    <span class="criteria-badge high">High Value</span>
+                                    <span class="criteria-badge high">Low Complexity</span>
+                                </div>
+                                <div class="solution-explored">Easy to implement, minimal cost, no app download needed</div>
+                                <div class="solution-issues">Requires smartphone access, potential for user error in scanning</div>
+                                <div class="solution-result">
+                                    <span class="result-badge selected">Selected</span>
+                                </div>
+                            </div>
+                            
+                            <div class="solutions-row considered">
+                                <div class="solution-name">
+                                    <i class="fas fa-bluetooth-b solution-icon-small"></i>
+                                    <span>Bluetooth Beacon</span>
+                                </div>
+                                <div class="solution-position">
+                                    <span class="criteria-badge medium">Medium Value</span>
+                                    <span class="criteria-badge medium">Medium Complexity</span>
+                                </div>
+                                <div class="solution-explored">Passive method, no action required from visitors.</div>
+                                <div class="solution-issues">Hardware installation, signal accuracy, may not detect all footfall.</div>
+                                <div class="solution-result">
+                                    <span class="result-badge considered">Considered</span>
+                                </div>
+                            </div>
+                            
+                            <div class="solutions-row considered">
+                                <div class="solution-name">
+                                    <i class="fas fa-wifi solution-icon-small"></i>
+                                    <span>Wi-Fi Signal Sensing</span>
+                                </div>
+                                <div class="solution-position">
+                                    <span class="criteria-badge medium">Medium Value</span>
+                                    <span class="criteria-badge low">High Complexity</span>
+                                </div>
+                                <div class="solution-explored">Non-intrusive and automated.</div>
+                                <div class="solution-issues">Not all visitors have Wi-Fi on, may overcount or undercount.</div>
+                                <div class="solution-result">
+                                    <span class="result-badge considered">Considered</span>
+                                </div>
+                            </div>
+                            
+                            <div class="solutions-row considered">
+                                <div class="solution-name">
+                                    <i class="fas fa-thermometer-half solution-icon-small"></i>
+                                    <span>Thermal Cameras</span>
+                                </div>
+                                <div class="solution-position">
+                                    <span class="criteria-badge medium">Medium Value</span>
+                                    <span class="criteria-badge low">High Complexity</span>
+                                </div>
+                                <div class="solution-explored">Accurate detection</div>
+                                <div class="solution-issues">High cost, complex installation, heritage building restrictions</div>
+                                <div class="solution-result">
+                                    <span class="result-badge considered">Considered</span>
+                                </div>
+                            </div>
+                            
+                            <div class="solutions-row considered">
+                                <div class="solution-name">
+                                    <i class="fas fa-weight solution-icon-small"></i>
+                                    <span>Pressure Sensors</span>
+                                </div>
+                                <div class="solution-position">
+                                    <span class="criteria-badge medium">Medium Value</span>
+                                    <span class="criteria-badge low">High Complexity</span>
+                                </div>
+                                <div class="solution-explored">Passive and can capture footfall automatically.</div>
+                                <div class="solution-issues">Hardware cost, durability, power and data connection concerns</div>
+                                <div class="solution-result">
+                                    <span class="result-badge considered">Considered</span>
+                                </div>
+                            </div>
+                            
+                            <div class="solutions-row rejected">
+                                <div class="solution-name">
+                                    <i class="fas fa-person solution-icon-small"></i>
+                                    <span>Manual Counting</span>
+                                </div>
+                                <div class="solution-position">
+                                    <span class="criteria-badge low">Low Value</span>
+                                    <span class="criteria-badge high">Low Complexity</span>
+                                </div>
+                                <div class="solution-explored">Simple to implement, no technology required, immediate deployment.</div>
+                                <div class="solution-issues">Labour-Intensive, Scalability, Cost & Coordination</div>
+                                <div class="solution-result">
+                                    <span class="result-badge rejected">Rejected</span>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -340,137 +442,6 @@
         </div>
     </section>
 
-    <!-- Solutions Modal -->
-    <div id="solutionsModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>6 Solution Options Evaluated</h2>
-                <span class="close" onclick="closeSolutionsModal()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="solutions-showcase">
-                    <div class="solution-card selected">
-                        <div class="solution-icon">
-                            <i class="fas fa-qrcode"></i>
-                        </div>
-                        <div class="solution-content">
-                            <h5>✅ QR Code Check-In Using Mobile Phone</h5>
-                            <p><strong>Position:</strong> High user value, low technical complexity</p>
-                            <p><strong>Description:</strong> Visitors can check in and out by scanning a QR code with their smartphones.</p>
-                            <p><strong>Why Explored:</strong> Easy to implement, minimal cost, no app download needed.</p>
-                            <div class="solution-evaluation">
-                                <div class="eval-criteria">
-                                    <span class="criteria-item high">Value: High</span>
-                                    <span class="criteria-item high">Complexity: Low</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solution-status selected">Top Candidate</div>
-                    </div>
-                    
-                    <div class="solution-card considered">
-                        <div class="solution-icon">
-                            <i class="fas fa-bluetooth-b"></i>
-                        </div>
-                        <div class="solution-content">
-                            <h5>⚠️ Bluetooth Beacon Tally Counter</h5>
-                            <p><strong>Position:</strong> Moderate value, moderate complexity</p>
-                            <p><strong>Description:</strong> Detects when a visitor walks past a beaconed zone.</p>
-                            <p><strong>Why Explored:</strong> Passive method, no action required from visitors.</p>
-                            <p><strong>Issues:</strong> Hardware installation, signal accuracy, may not detect all footfall.</p>
-                            <div class="solution-evaluation">
-                                <div class="eval-criteria">
-                                    <span class="criteria-item medium">Value: Medium</span>
-                                    <span class="criteria-item medium">Complexity: Medium</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solution-status considered">Considered</div>
-                    </div>
-                    
-                    <div class="solution-card considered">
-                        <div class="solution-icon">
-                            <i class="fas fa-wifi"></i>
-                        </div>
-                        <div class="solution-content">
-                            <h5>⚠️ Passive Wi-Fi Signal Sensing</h5>
-                            <p><strong>Position:</strong> Moderate value, high complexity</p>
-                            <p><strong>Description:</strong> Counts mobile devices pinging for Wi-Fi connections.</p>
-                            <p><strong>Why Explored:</strong> Non-intrusive and automated.</p>
-                            <p><strong>Issues:</strong> Not all visitors have Wi-Fi on, may overcount or undercount.</p>
-                            <div class="solution-evaluation">
-                                <div class="eval-criteria">
-                                    <span class="criteria-item medium">Value: Medium</span>
-                                    <span class="criteria-item low">Complexity: High</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solution-status considered">Considered</div>
-                    </div>
-                    
-                    <div class="solution-card considered">
-                        <div class="solution-icon">
-                            <i class="fas fa-thermometer-half"></i>
-                        </div>
-                        <div class="solution-content">
-                            <h5>⚠️ Heat Signature Counting with Thermal Cameras</h5>
-                            <p><strong>Position:</strong> Moderate value, high complexity</p>
-                            <p><strong>Description:</strong> Uses thermal imaging to detect human body signatures.</p>
-                            <p><strong>Why Explored:</strong> Accurate headcount potential.</p>
-                            <p><strong>Issues:</strong> Expensive, requires discreet camera installation.</p>
-                            <div class="solution-evaluation">
-                                <div class="eval-criteria">
-                                    <span class="criteria-item medium">Value: Medium</span>
-                                    <span class="criteria-item low">Complexity: High</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solution-status considered">Considered</div>
-                    </div>
-                    
-                    <div class="solution-card considered">
-                        <div class="solution-icon">
-                            <i class="fas fa-weight"></i>
-                        </div>
-                        <div class="solution-content">
-                            <h5>⚠️ Entrance Mat Pressure Sensors</h5>
-                            <p><strong>Position:</strong> Moderate value, high complexity</p>
-                            <p><strong>Description:</strong> Uses pressure-sensitive mats to count foot traffic.</p>
-                            <p><strong>Why Explored:</strong> Passive and can capture footfall automatically.</p>
-                            <p><strong>Issues:</strong> Hardware cost, durability, power and data connection concerns, complex analytics.</p>
-                            <div class="solution-evaluation">
-                                <div class="eval-criteria">
-                                    <span class="criteria-item medium">Value: Medium</span>
-                                    <span class="criteria-item low">Complexity: High</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solution-status considered">Considered</div>
-                    </div>
-                    
-                    <div class="solution-card rejected">
-                        <div class="solution-icon">
-                            <i class="fas fa-person"></i>
-                        </div>
-                        <div class="solution-content">
-                            <h5>❌ Manual Counting by Staff / Volunteers</h5>
-                            <p><strong>Position:</strong> Low value, low technical complexity</p>
-                            <p><strong>Description:</strong> Staff or volunteers manually count visitors using handheld clickers or paper logs.</p>
-                            <p><strong>Why Explored:</strong> Simple to implement, no technology required, immediate deployment.</p>
-                            <p><strong>Issues:</strong> Labour-Intensive, Scalability, Cost & Coordination</p>
-                            <div class="solution-evaluation">
-                                <div class="eval-criteria">
-                                    <span class="criteria-item low">Value: Low</span>
-                                    <span class="criteria-item high">Complexity: Low</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="solution-status rejected">Rejected</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
