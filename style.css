@@ -1255,6 +1255,7 @@ body:has(.design-journey-content) {
 .phase-navigation-inline {
     padding-top: 3rem;
     text-align: center;
+    padding-bottom:3rem;
 }
 
 .phase-navigation-inline .nav-card {
