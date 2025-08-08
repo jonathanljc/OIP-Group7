@@ -982,6 +982,55 @@ document.addEventListener('keydown', function(event) {
 
 // View Toggle and Carousel Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Check internet connectivity and auto-switch to gallery if offline
+    function checkConnectivity() {
+        if (!navigator.onLine) {
+            // Switch all toggles to gallery view when offline
+            const galleryToggles = document.querySelectorAll('input[value="gallery"]');
+            galleryToggles.forEach(toggle => {
+                toggle.checked = true;
+                
+                // Manually trigger the view switching logic
+                const viewType = toggle.value; // 'gallery'
+                const systemType = toggle.name.split('-')[0]; // 'qr' or 'kiosk'
+                const parentTabContent = toggle.closest('.tab-content');
+                
+                if (parentTabContent) {
+                    // Hide all sub-tab contents in this parent
+                    parentTabContent.querySelectorAll('.sub-tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Show the gallery content
+                    const targetContentId = `${systemType}-carousel`;
+                    const targetContent = document.getElementById(targetContentId);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                }
+            });
+        }
+    }
+    
+    // Check connectivity on page load
+    checkConnectivity();
+    
+    // Listen for online/offline events
+    window.addEventListener('offline', function() {
+        checkConnectivity();
+    });
+    
+    window.addEventListener('online', function() {
+        // Optionally switch back to interactive when online
+        // Uncomment the lines below if you want auto-switch back to interactive
+        // const interactiveToggles = document.querySelectorAll('input[value="interactive"]');
+        // interactiveToggles.forEach(toggle => {
+        //     toggle.checked = true;
+        //     const event = new Event('change');
+        //     toggle.dispatchEvent(event);
+        // });
+    });
+    
     // View toggle functionality
     const viewToggles = document.querySelectorAll('.view-toggle-switch input[type="radio"]');
     
