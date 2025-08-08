@@ -979,3 +979,99 @@ document.addEventListener('keydown', function(event) {
         closeSolutionsModal();
     }
 });
+
+// View Toggle and Carousel Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // View toggle functionality
+    const viewToggles = document.querySelectorAll('.view-toggle-switch input[type="radio"]');
+    
+    viewToggles.forEach(toggle => {
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                const viewType = this.value; // 'interactive' or 'gallery'
+                const systemType = this.name.split('-')[0]; // 'qr' or 'kiosk'
+                const parentTabContent = this.closest('.tab-content');
+                
+                // Hide all sub-tab contents in this parent
+                parentTabContent.querySelectorAll('.sub-tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show the selected content
+                const targetContentId = `${systemType}-${viewType === 'interactive' ? 'interactive' : 'carousel'}`;
+                const targetContent = document.getElementById(targetContentId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            }
+        });
+    });
+
+    // Carousel functionality
+    const carousels = ['qr', 'kiosk'];
+    
+    carousels.forEach(carouselType => {
+        const track = document.getElementById(`${carouselType}-carousel-track`);
+        const slides = track?.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll(`#${carouselType}-indicators .indicator`);
+        const prevBtn = document.querySelector(`[data-carousel="${carouselType}"].prev`);
+        const nextBtn = document.querySelector(`[data-carousel="${carouselType}"].next`);
+        
+        if (!track || !slides.length) return;
+        
+        let currentSlide = 0;
+        
+        function updateCarousel() {
+            // Update track position
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update slide active states
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+        
+        // Event listeners
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        
+        // Indicator clicks
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const activeTab = document.querySelector('.tab-content.active');
+            const activeSubTab = activeTab?.querySelector('.sub-tab-content.active');
+            
+            if (activeSubTab && activeSubTab.id.includes(carouselType)) {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    nextSlide();
+                }
+            }
+        });
+    });
+});
